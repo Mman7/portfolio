@@ -1,15 +1,49 @@
+import { Link } from "react-scroll";
+
+const scrollDuration = 500;
+
 export default function Navbar() {
   return (
-    <div className="p-3">
-      <div className="navbar bg-white/10 shadow-sm backdrop-blur-3xl">
+    <div className="p-2">
+      <div className="navbar fixed z-1000 rounded-xl bg-black/40 backdrop-blur-2xl">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">Eric Man</a>
+          <Link to="hero" smooth={true} duration={scrollDuration}>
+            <button className="btn btn-ghost text-xl">Eric Man</button>
+          </Link>
         </div>
         <div className="hidden flex-1 justify-between px-4 sm:flex">
-          <Button>About</Button>
-          <Button>Projects</Button>
-          <Button>Skills</Button>
-          <Button>Contact</Button>
+          <Link
+            to="about"
+            smooth={true}
+            duration={scrollDuration}
+            offset={-100}
+          >
+            <Button>About</Button>
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={scrollDuration}
+            offset={-100}
+          >
+            <Button>Projects</Button>
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={scrollDuration}
+            offset={-100}
+          >
+            <Button>Skills</Button>
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={scrollDuration}
+            offset={-100}
+          >
+            <Button>Contact</Button>
+          </Link>
         </div>
         <DropDownMenu />
       </div>
@@ -19,7 +53,7 @@ export default function Navbar() {
 
 function Button({ children }: { children: string }) {
   return (
-    <button className="rounded-md px-4 py-2 text-lg duration-300 hover:cursor-pointer hover:bg-amber-50 hover:text-black">
+    <button className="rounded-md px-4 py-2 text-lg text-white duration-300 hover:cursor-pointer hover:bg-amber-50 hover:text-black">
       {children}
     </button>
   );
@@ -48,12 +82,36 @@ function DropDownMenu() {
         tabIndex={-1}
         className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
       >
-        <li>
-          <a>Item 1</a>
-        </li>
-        <li>
-          <a>Item 2</a>
-        </li>
+        <Link to="about" smooth={true} duration={scrollDuration} offset={-100}>
+          <li>
+            <button>About</button>
+          </li>
+        </Link>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={scrollDuration}
+          offset={-100}
+        >
+          <li>
+            <button>Projects</button>
+          </li>
+        </Link>
+        <Link to="skills" smooth={true} duration={scrollDuration} offset={-100}>
+          <li>
+            <button>Skills</button>
+          </li>
+        </Link>
+        <Link
+          to="contacts"
+          smooth={true}
+          duration={scrollDuration}
+          offset={-100}
+        >
+          <li>
+            <button>Contact</button>
+          </li>
+        </Link>
       </ul>
     </div>
   );
