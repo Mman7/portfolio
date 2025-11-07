@@ -1,4 +1,28 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, night;
+  themes:
+    light --default,
+    night dark --prefersdark,
+    night;
+}
+@theme {
+  --color-font-dark: #0c2b4e;
+  --color-myPrimary: #0c2b4e;
+  --color-mySecondary: #1a3d64;
+  --color-customBase: #12181f;
+  --color-customWhite: #f4f4f4;
+}
+
+.containerShadow {
+  box-shadow: 0px -30px 30px 10px var(--color-customBase);
+  position: relative;
+  z-index: 120;
+}
+.bg-pattern {
+  background-color: #12181f;
+
+  /* opacity: 0.8; */
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #12181f 25px),
+    repeating-linear-gradient(#161e2f55, #161e2f);
 }

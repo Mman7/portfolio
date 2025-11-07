@@ -1,8 +1,12 @@
+import Body from "./components/body";
+import Navbar from "./components/navbar";
+
 function App() {
   return (
-    <>
-      <h1 className="">hello world</h1>
-    </>
+    <div>
+      <Navbar />
+      <Body />
+    </div>
   );
 }
 
