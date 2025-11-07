@@ -3,31 +3,37 @@ import type { ReactElement } from "react";
 
 export default function About() {
   return (
-    <div className="containerShadow flex w-full flex-col justify-between gap-12 px-8 py-12 md:flex-row">
-      <Card className="bg-myPrimary">
-        <main className="flex flex-col justify-center gap-10">
+    <main className="containerShadow grid w-full scroll-mt-24 grid-cols-1 gap-6 px-8 py-14 md:grid-cols-2">
+      <section className="flex flex-col gap-6">
+        <Card className="bg-myPrimary row-span-1">
           <div className="flex items-center gap-5">
             <PanelTop className="size-16" />
-            <section>
+            <div>
               <h1 className="text-2xl font-medium">Web Development</h1>
               <h2>Build responsive websites</h2>
-            </section>
+            </div>
           </div>
-          <div className="flex items-center gap-5">
+        </Card>
+        <Card className="bg-myPrimary row-span-1">
+          <div className="flex items-center gap-3">
             <Smartphone className="size-16" />
-            <section>
+            <div>
               <h1 className="text-2xl font-medium">Mobile Development</h1>
               <h2>Cross-platform mobile apps</h2>
-            </section>
+            </div>
           </div>
-        </main>
-      </Card>
-      <Card className="bg-customWhite">
+        </Card>
+      </section>
+
+      <Card className="bg-customWhite flex flex-col justify-center">
         <div>
-          <h1 className="text-font-dark mb-2 text-2xl font-bold">About me</h1>
+          <h1 className="text-font-dark row-col-2 mb-2 text-2xl font-bold">
+            About me
+          </h1>
           <h2 className="text-font-dark">
-            I’m a self-taught web developer driven by curiosity and a passion
-            for building clean, functional, and user-friendly applications.
+            Hey I’m Eric a self-taught web developer driven by curiosity and a
+            passion for building clean, functional, and user-friendly
+            applications.
           </h2>
           <br />
           <h2 className="text-font-dark">
@@ -36,7 +42,7 @@ export default function About() {
           </h2>
         </div>
       </Card>
-    </div>
+    </main>
   );
 }
 
@@ -49,7 +55,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`${className} grid w-full flex-1 justify-items-center space-y-5 rounded-lg p-8`}
+      className={`${className} justify-items-center rounded-lg p-8 text-center md:text-start`}
     >
       {children}
     </div>
