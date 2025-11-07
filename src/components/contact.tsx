@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="my-14 flex flex-col items-center px-16">
+    <div className="my-14 flex scroll-mt-24 flex-col items-center px-8">
       <h1 className="mb-6 text-center text-3xl font-medium">
         Let’s have a talk!
       </h1>
@@ -18,7 +18,7 @@ export default function Contact() {
           type="text
         "
           className="input h-16 w-full"
-          placeholder="text..."
+          placeholder="hello..."
         />
 
         <button className="btn btn-neutral mt-4">Send</button>
