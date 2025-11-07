@@ -11,6 +11,7 @@
   --color-mySecondary: #1a3d64;
   --color-customBase: #12181f;
   --color-customWhite: #f4f4f4;
+  --font-display: myFont, sans-serif;
 }
 
 .containerShadow {
@@ -25,4 +26,9 @@
   background-image:
     repeating-radial-gradient(circle at 0 0, transparent 0, #12181f 25px),
     repeating-linear-gradient(#161e2f55, #161e2f);
+}
+
+@font-face {
+  font-family: myFont; /* set name */
+  src: url("./fonts/RoclettePro-Bold.otf") format("otf"); /* url of the font */
 }
