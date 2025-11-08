@@ -35,7 +35,11 @@ export default function HeroSection() {
           </button>
         </Link>
       </div>
-      <SideContact />
+      <div
+        className={`absolute top-1/8 right-0 z-200 hidden flex-col justify-between gap-10 rounded-xl bg-black/40 p-3 *:duration-300 md:top-1/3 md:flex`}
+      >
+        <SideContact />
+      </div>
       {/* Background TEXT */}
       <div className="absolute top-1/2 left-1/2 hidden w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden md:block lg:p-30">
         <h1 className="font-display text-start text-base/50 text-[16rem] font-black tracking-tighter text-gray-600 opacity-55">
@@ -49,11 +53,9 @@ export default function HeroSection() {
   );
 }
 
-export function SideContact({ className }: { className?: string }) {
+export function SideContact() {
   return (
-    <div
-      className={`absolute top-1/8 right-0 z-200 hidden flex-col justify-between gap-10 rounded-xl bg-black/40 p-3 *:duration-300 md:top-1/3 md:flex ${className}`}
-    >
+    <>
       <a
         href="https://www.linkedin.com/in/man-eric-2aa13b159/"
         target="_blank"
@@ -73,11 +75,12 @@ export function SideContact({ className }: { className?: string }) {
       {/* TODO show user that copy */}
       <a
         title="youzai0427@gmail.com"
+        target="_blank"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
         className="hover:text-white"
       >
         <FontAwesomeIcon size="2xl" icon={faEnvelope} />
       </a>
-    </div>
+    </>
   );
 }
