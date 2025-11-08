@@ -8,7 +8,9 @@ export default function Navbar() {
       <div className="navbar fixed z-1000 rounded-xl bg-black/40 backdrop-blur-2xl">
         <div className="flex-1">
           <Link to="hero" smooth={true} duration={scrollDuration}>
-            <button className="btn btn-ghost text-xl">Eric Man</button>
+            <button className="btn btn-ghost text-xl hover:text-white">
+              Eric Man
+            </button>
           </Link>
         </div>
         <div className="hidden flex-1 justify-between px-4 sm:flex">
@@ -53,7 +55,7 @@ export default function Navbar() {
 
 function Button({ children }: { children: string }) {
   return (
-    <button className="rounded-md px-6 py-1 text-lg text-white duration-300 hover:cursor-pointer hover:bg-amber-50 hover:text-black">
+    <button className="rounded-sm border border-gray-300 px-6 py-1 text-lg text-gray-300 duration-300 hover:cursor-pointer hover:bg-white hover:text-black">
       {children}
     </button>
   );
