@@ -105,7 +105,7 @@ const projectsList: ItemCardProps[] = [
     title: "Notely",
     description:
       "Notely is Note App built for local synchronization of data, the project doesn't require a remote server or any middle server",
-    badges: ["Flutter", "Dart", "MaterialUI", "AES256"],
+    badges: ["Flutter", "Dart", "MaterialUI", "AES256", "UDP", "TCP"],
     imgSrc: notelyPic,
     siteLink: "https://github.com/Mman7/Notely/releases",
     codeLink: "https://github.com/Mman7/Notely",
