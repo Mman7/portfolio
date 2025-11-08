@@ -13,7 +13,7 @@ export default function HeroSection() {
         alt="avatar"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
-        className="z-10 mt-30 mb-20 h-72 brightness-80 select-none"
+        className="z-10 mt-30 mb-20 h-72 brightness-80 select-none md:hidden"
       />
       <img
         src={Avatar}
@@ -41,11 +41,11 @@ export default function HeroSection() {
         <SideContact />
       </div>
       {/* Background TEXT */}
-      <div className="absolute top-1/2 left-1/2 hidden w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden md:block lg:p-30">
-        <h1 className="font-display text-start text-base/50 text-[16rem] font-black tracking-tighter text-gray-600 opacity-55">
+      <div className="absolute top-1/2 left-1/2 hidden w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden p-6 select-none md:block">
+        <h1 className="font-display text-start text-base/48 text-[calc(10rem+4vw)] font-black tracking-tighter text-gray-600 opacity-55">
           FRONTEND
         </h1>
-        <h1 className="font-display text-end text-base/60 text-[16rem] font-black tracking-tighter text-gray-600 opacity-55">
+        <h1 className="font-display text-end text-base/48 text-[calc(10rem+4vw)] font-black tracking-tighter text-gray-600 opacity-55">
           DEVELOPER
         </h1>
       </div>
