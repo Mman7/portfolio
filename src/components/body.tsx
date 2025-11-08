@@ -1,5 +1,6 @@
 import About from "./about";
 import Contact from "./contact";
+import Footer from "./footer";
 import HeroSection from "./hero";
 import Projects from "./projects";
 import Skill from "./skill";
@@ -26,6 +27,7 @@ export default function Body() {
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer />
     </div>
   );
 }
