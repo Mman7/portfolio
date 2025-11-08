@@ -1,6 +1,9 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Code, Link } from "lucide-react";
+import notelyPic from "../assets/showcase/notely.png";
+import tomatoCountPic from "../assets/showcase/tomato_count.png";
+import pokedexPic from "../assets/showcase/pokedex.png";
 
 interface ItemCardProps {
   title: string;
@@ -94,8 +97,7 @@ const projectsList: ItemCardProps[] = [
     description:
       "Tomato Clock is a minimal and elegant Pomodoro timer app. It helps users boost productivity by structuring work in focused intervals interspersed with breaks.",
     badges: ["Flutter", "Dart", "MaterialUI"],
-    imgSrc:
-      "https://private-user-images.githubusercontent.com/70054123/493440608-40e80dd5-d262-45bb-8116-57cc53da316c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI1Mzg0OTEsIm5iZiI6MTc2MjUzODE5MSwicGF0aCI6Ii83MDA1NDEyMy80OTM0NDA2MDgtNDBlODBkZDUtZDI2Mi00NWJiLTgxMTYtNTdjYzUzZGEzMTZjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTA3VDE3NTYzMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIxNmUwMzk2YjMyY2FlYjYxZmRkZWE2ZGM1MDgyNDc5OGViZTI2M2ZiNjJmNzczODNkMWJmNzU5NTMwMTIwMjEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.OpmnjF6huqS1qMLQ1Pp9oTYBni1D2O5JXKuEyPRl-0s",
+    imgSrc: tomatoCountPic,
     siteLink: "https://github.com/Mman7/tomato_clock/releases",
     codeLink: "https://github.com/Mman7/tomato_clock",
   },
@@ -104,8 +106,7 @@ const projectsList: ItemCardProps[] = [
     description:
       "Notely is Note App built for local synchronization of data, the project doesn't require a remote server or any middle server",
     badges: ["Flutter", "Dart", "MaterialUI", "AES256"],
-    imgSrc:
-      "https://private-user-images.githubusercontent.com/70054123/495702591-3cc51485-fc7e-4356-b1cc-2395197d49ca.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI1Mzg1NjEsIm5iZiI6MTc2MjUzODI2MSwicGF0aCI6Ii83MDA1NDEyMy80OTU3MDI1OTEtM2NjNTE0ODUtZmM3ZS00MzU2LWIxY2MtMjM5NTE5N2Q0OWNhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTA3VDE3NTc0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM0OTU2ZWQ4ZGNmZjNkMjQ5MGFhY2QzMDljOTdhOGI0ODE0NDdjZDIxYTg3NTFkNjViZTY1MmJjMGJhMzQ2NWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Lsqo63Tdxo5YKpuk-vM3pbkR_EOz-zT_L-MB9SVCI9k",
+    imgSrc: notelyPic,
     siteLink: "https://github.com/Mman7/Notely/releases",
     codeLink: "https://github.com/Mman7/Notely",
   },
@@ -114,8 +115,7 @@ const projectsList: ItemCardProps[] = [
     description:
       "Pokémon Index is a web app that lets users browse, search, and explore detailed information about Pokémon in a clean and responsive interface.",
     badges: ["React", "TailwindCSS", "ReactQuery", "ReactRouter"],
-    imgSrc:
-      "https://private-user-images.githubusercontent.com/70054123/511444965-ab9ed431-5878-49cb-89d8-2a10bbe54496.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI1MzgyOTYsIm5iZiI6MTc2MjUzNzk5NiwicGF0aCI6Ii83MDA1NDEyMy81MTE0NDQ5NjUtYWI5ZWQ0MzEtNTg3OC00OWNiLTg5ZDgtMmExMGJiZTU0NDk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTA3VDE3NTMxNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQwZjdhZGU1ZTM2N2I0NTRiOWE5NzMxMGJhYmE4NzMwZmZmNWEzYzJlODRlZmY5NTcxNjAwMWE2NmI0ODQwMDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7tK59xMT2OVa86nZkHuEFFbxKiGyQ-66_lJhur49-bM",
+    imgSrc: pokedexPic,
     siteLink: "https://pokedex-db.netlify.app/",
     codeLink: "https://github.com/Mman7/pokemon_index",
   },
