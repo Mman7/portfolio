@@ -8,7 +8,7 @@ import { Element } from "react-scroll";
 
 export default function Body() {
   return (
-    <div className="bg-customBase h-dvh w-full">
+    <div className="bg-customBase dvh w-full">
       <Element
         name="hero"
         className="bg-pattern overflow: auto z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]"

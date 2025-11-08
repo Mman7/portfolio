@@ -53,7 +53,7 @@ export default function Navbar() {
 
 function Button({ children }: { children: string }) {
   return (
-    <button className="rounded-md px-4 py-2 text-lg text-white duration-300 hover:cursor-pointer hover:bg-amber-50 hover:text-black">
+    <button className="rounded-md px-6 py-1 text-lg text-white duration-300 hover:cursor-pointer hover:bg-amber-50 hover:text-black">
       {children}
     </button>
   );

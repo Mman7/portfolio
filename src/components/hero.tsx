@@ -41,11 +41,11 @@ export default function HeroSection() {
         <SideContact />
       </div>
       {/* Background TEXT */}
-      <div className="absolute top-1/2 left-1/2 hidden w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden p-6 select-none md:block">
-        <h1 className="font-display text-start text-base/48 text-[calc(10rem+4vw)] font-black tracking-tighter text-gray-600 opacity-55">
+      <div className="absolute inset-0 z-0 hidden flex-col items-center justify-center overflow-hidden text-5xl font-bold text-gray-300 select-none md:flex">
+        <h1 className="font-display mr-35 text-center text-base/47 text-[calc(12rem+2vw)] font-black tracking-tighter text-gray-600 opacity-55">
           FRONTEND
         </h1>
-        <h1 className="font-display text-end text-base/48 text-[calc(10rem+4vw)] font-black tracking-tighter text-gray-600 opacity-55">
+        <h1 className="font-display ml-35 text-center text-base/47 text-[calc(12rem+2vw)] font-black tracking-tighter text-gray-600 opacity-55">
           DEVELOPER
         </h1>
       </div>
