@@ -13,6 +13,10 @@
   --color-customWhite: #f4f4f4;
   --font-display: myFont, sans-serif;
 }
+@font-face {
+  font-family: myFont; /* set name */
+  src: url("./fonts/RoclettePro-Bold.otf") format("otf"); /* url of the font */
+}
 
 .containerShadow {
   box-shadow: 0px -30px 30px 10px var(--color-customBase);
@@ -29,7 +33,20 @@
     repeating-linear-gradient(#161e2f55, #161e2f);
 }
 
-@font-face {
-  font-family: myFont; /* set name */
-  src: url("./fonts/RoclettePro-Bold.otf") format("otf"); /* url of the font */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0; /* Start completely transparent */
+    transform: translateX(-30px); /* Start slightly below its final position */
+  }
+  100% {
+    opacity: 1; /* End fully opaque */
+    transform: translateX(0); /* End at its original vertical position */
+  }
+}
+
+/* Apply the animation to an element */
+.fade-slide-in {
+  animation:
+    fadeSlideIn 300ms,
+    ease-out forwards; /* Apply the animation */
 }
