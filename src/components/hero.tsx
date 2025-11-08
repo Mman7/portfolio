@@ -72,10 +72,8 @@ export function SideContact({ className }: { className?: string }) {
       </a>
       {/* TODO show user that copy */}
       <a
-        onClick={() => navigator.clipboard.writeText("youzai0427@gmail.com")}
-        id="13"
         title="youzai0427@gmail.com"
-        href="mailto:youzai0427@gmail.com"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
         className="hover:text-white"
       >
         <FontAwesomeIcon size="2xl" icon={faEnvelope} />
