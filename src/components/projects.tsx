@@ -33,6 +33,7 @@ export default function Projects() {
       </div>
       <div className="mt-20 mb-10 text-center">
         <a
+          aria-label="Github Profile Link"
           className="duraiton-200 text-lg text-gray-400 transition-all hover:text-white"
           target="_blank"
           href="https://github.com/Mman7"
@@ -61,13 +62,19 @@ export function ItemCard({
       </figure>
       <div className="card-body">
         <div className="flex w-full">
-          <a target="_blank" href={siteLink} className="hover:text-sky-300">
+          <a
+            aria-label={`${title} Site Link`}
+            target="_blank"
+            href={siteLink}
+            className="hover:text-sky-300"
+          >
             <h2 className="card-title">
               {title}
               <Link size={16} />
             </h2>
           </a>
           <a
+            aria-label={`${title} Code Link`}
             target="_blank"
             className="ml-auto hover:text-sky-300"
             href={codeLink}

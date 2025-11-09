@@ -57,6 +57,7 @@ export function SideContact() {
   return (
     <>
       <a
+        aria-label="LinkedIn Link"
         href="https://www.linkedin.com/in/man-eric-2aa13b159/"
         target="_blank"
         className="hover:text-white"
@@ -65,6 +66,7 @@ export function SideContact() {
         <FontAwesomeIcon size="2xl" icon={faSquareLinkedin} />
       </a>
       <a
+        aria-label="Github Link"
         href="https://github.com/Mman7"
         target="_blank"
         title="https://github.com/Mman7"
@@ -72,8 +74,8 @@ export function SideContact() {
       >
         <FontAwesomeIcon size="2xl" icon={faGithub} />
       </a>
-      {/* TODO show user that copy */}
       <a
+        aria-label="Gmail Link"
         title="youzai0427@gmail.com"
         target="_blank"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
