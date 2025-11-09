@@ -5,10 +5,13 @@ const scrollDuration = 500;
 export default function Navbar() {
   return (
     <div className="p-2">
-      <div className="navbar fixed z-1000 rounded-xl bg-black/40 backdrop-blur-2xl">
+      <div className="navbar fixed z-1000 rounded-xl bg-black/40 px-4 backdrop-blur-2xl">
         <div className="flex-1">
           <Link to="hero" smooth={true} duration={scrollDuration}>
-            <button className="btn btn-ghost text-xl hover:text-white">
+            <button
+              aria-label="home"
+              className="btn btn-ghost text-xl hover:text-white"
+            >
               Eric Man
             </button>
           </Link>
@@ -55,7 +58,10 @@ export default function Navbar() {
 
 function Button({ children }: { children: string }) {
   return (
-    <button className="rounded-sm border border-gray-300 px-6 py-1 text-lg text-gray-300 duration-300 hover:cursor-pointer hover:bg-white hover:text-black">
+    <button
+      aria-label={`${children}`}
+      className="rounded-sm border border-gray-300 px-6 py-1 text-lg text-gray-300 duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
+    >
       {children}
     </button>
   );
