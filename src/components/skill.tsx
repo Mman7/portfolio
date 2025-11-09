@@ -13,6 +13,7 @@ import {
   faSquareGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useInView } from "react-intersection-observer";
 
 const fontAwesomeIconSize = "2x";
 const svgIconSize = "size-10";
@@ -98,8 +99,17 @@ export default function Skill() {
 }
 
 export function SkillItem({ children }: { children: React.ReactNode }) {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+    rootMargin: "-50px",
+  });
   return (
-    <div className="bg-mySecondary grid justify-items-center rounded-md p-3 duration-300 hover:brightness-125">
+    <div
+      ref={ref}
+      className={`${inView && "animate-slideInFromBottom opacity-100"} bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
+    >
       <div className="flex items-center justify-between gap-1 text-white">
         {children}
       </div>

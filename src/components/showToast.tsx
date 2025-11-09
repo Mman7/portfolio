@@ -18,7 +18,7 @@ export default function ShowToastWrapper({
     <>
       {children}
       {toast.show && (
-        <div className="toast toast-start fade-slide-in">
+        <div className="toast toast-start animate-slideIn">
           <div
             className={`alert ${toast.failed ? "alert-error" : "alert-success"}`}
           >
