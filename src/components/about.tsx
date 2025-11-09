@@ -10,7 +10,7 @@ export default function About() {
             <PanelTop className="size-16" />
             <div>
               <h1 className="text-2xl font-medium">Web Development</h1>
-              <h2>Build responsive websites</h2>
+              <h2 className="text-start">Build responsive websites</h2>
             </div>
           </div>
         </Card>
@@ -19,13 +19,13 @@ export default function About() {
             <Smartphone className="size-16" />
             <div>
               <h1 className="text-2xl font-medium">Mobile Development</h1>
-              <h2>Cross-platform mobile apps</h2>
+              <h2 className="text-start">Cross-platform mobile apps</h2>
             </div>
           </div>
         </Card>
       </section>
 
-      <Card className="bg-customWhite flex flex-col justify-center">
+      <Card className="bg-customWhite flex flex-col justify-center px-12 py-12">
         <div>
           <h1 className="text-font-dark row-col-2 mb-2 text-2xl font-bold">
             About me
