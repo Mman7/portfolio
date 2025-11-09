@@ -60,7 +60,7 @@ export default function Contact() {
           Let’s have a talk!
         </h1>
         <form className="w-full" onSubmit={handleSubmit} ref={form}>
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col border p-4">
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
             <legend className="fieldset-legend text-lg">
               Send me an Email!
             </legend>
@@ -91,7 +91,10 @@ export default function Contact() {
               onChange={handleChange}
             />
 
-            <button className="btn btn-neutral mt-4 border-0 hover:bg-sky-500">
+            <button
+              className="btn btn-neutral mt-4 border-0 hover:bg-sky-500"
+              disabled={isFormSending}
+            >
               {isFormSending ? (
                 <span className="loading loading-spinner loading-md"></span>
               ) : (
