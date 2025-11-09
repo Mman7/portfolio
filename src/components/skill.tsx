@@ -17,11 +17,11 @@ import { useInView } from "react-intersection-observer";
 
 const fontAwesomeIconSize = "2x";
 const svgIconSize = "size-10";
-const textStyle = "text-2xl font-medium ";
+const textStyle = "text-lg md:text-2xl font-medium ";
 
 export default function Skill() {
   return (
-    <div className="my-14 scroll-mt-24 px-8">
+    <div className="my-14 scroll-mt-24 px-4">
       <h1 className="mb-10 text-center text-3xl font-medium">Skills</h1>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <SkillItem>
