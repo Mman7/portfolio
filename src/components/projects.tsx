@@ -4,6 +4,7 @@ import { Code, Link } from "lucide-react";
 import notelyPic from "../assets/showcase/notely.png";
 import tomatoCountPic from "../assets/showcase/tomato_count.png";
 import pokedexPic from "../assets/showcase/pokedex.png";
+import ericmanDev from "../assets/showcase/ericman.dev.png";
 
 interface ItemCardProps {
   title: string;
@@ -56,8 +57,9 @@ export function ItemCard({
   codeLink,
 }: ItemCardProps) {
   return (
-    <div className="card w-full bg-gray-800 shadow-sm">
-      <figure>
+    <div className="card w-full bg-gray-800 shadow-md">
+      <figure className="relative">
+        <div className="absolute inset-0 bg-linear-to-b from-50% to-[#1E2939] opacity-100"></div>
         <img src={imgSrc} alt="Shoes" draggable={false} />
       </figure>
       <div className="card-body">
@@ -121,9 +123,18 @@ const projectsList: ItemCardProps[] = [
     title: "PokeDex",
     description:
       "Pokémon Index is a web app that lets users browse, search, and explore detailed information about Pokémon in a clean and responsive interface.",
-    badges: ["React", "TailwindCSS", "ReactQuery", "ReactRouter"],
+    badges: ["React", "TypeScript", "TailwindCSS", "ReactQuery", "ReactRouter"],
     imgSrc: pokedexPic,
     siteLink: "https://pokedex-db.netlify.app/",
     codeLink: "https://github.com/Mman7/pokemon_index",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio website built using React and TailwindCSS to showcase my projects, skills, and experience in web development.",
+    badges: ["React", "TailwindCSS", "TypeScript"],
+    imgSrc: ericmanDev,
+    siteLink: "www.ericman.dev",
+    codeLink: "https://github.com/Mman7/portfolio",
   },
 ];
