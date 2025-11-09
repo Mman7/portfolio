@@ -94,6 +94,7 @@ export default function Contact() {
             <button
               className="btn btn-neutral mt-4 border-0 hover:bg-sky-500"
               disabled={isFormSending}
+              aria-label="Send Email Button"
             >
               {isFormSending ? (
                 <span className="loading loading-spinner loading-md"></span>
