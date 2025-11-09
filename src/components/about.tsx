@@ -3,9 +3,9 @@ import type { ReactElement } from "react";
 
 export default function About() {
   return (
-    <main className="containerShadow grid w-full scroll-mt-24 grid-cols-1 gap-6 px-8 py-14 md:grid-cols-2">
+    <main className="containerShadow grid w-full scroll-mt-24 gap-6 px-8 py-14 md:grid-cols-2">
       <section className="flex flex-col gap-6">
-        <Card className="bg-myPrimary row-span-1">
+        <Card className="bg-myPrimary grid justify-items-center text-white">
           <div className="flex items-center gap-5">
             <PanelTop className="size-16" />
             <div>
@@ -16,8 +16,8 @@ export default function About() {
             </div>
           </div>
         </Card>
-        <Card className="bg-myPrimary row-span-1">
-          <div className="flex items-center gap-3">
+        <Card className="bg-myPrimary grid justify-items-center">
+          <div className="flex items-center gap-3 text-white">
             <Smartphone className="size-16" />
             <div>
               <h1 className="text-start text-2xl font-medium">
@@ -59,7 +59,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`${className} justify-items-center rounded-lg p-8 text-center md:text-start`}
+      className={`${className} h-full justify-items-center rounded-lg p-8 text-center md:text-start`}
     >
       {children}
     </div>

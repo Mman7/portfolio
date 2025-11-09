@@ -16,7 +16,7 @@ export default function Navbar() {
             </button>
           </Link>
         </div>
-        <div className="hidden flex-1 justify-between px-4 sm:flex">
+        <div className="hidden flex-1 justify-between space-x-3 px-4 sm:flex">
           <Link
             to="about"
             smooth={true}
@@ -60,7 +60,7 @@ function Button({ children }: { children: string }) {
   return (
     <button
       aria-label={`${children}`}
-      className="rounded-sm border border-gray-300 px-6 py-1 text-lg text-gray-300 duration-300 hover:cursor-pointer hover:bg-white hover:text-black"
+      className="rounded-sm border border-gray-300 px-6 py-1 text-base text-gray-300 duration-300 hover:cursor-pointer hover:bg-white hover:text-black md:text-lg"
     >
       {children}
     </button>
