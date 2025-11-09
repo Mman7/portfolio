@@ -18,7 +18,7 @@ interface ItemCardProps {
 
 export default function Projects() {
   return (
-    <div className="my-14 scroll-mt-24 p-6 px-16">
+    <div className="my-14 p-6 px-6">
       <h1 className="mb-10 text-center text-2xl font-medium">Projects</h1>
       <div className="grid grid-cols-1 justify-items-center gap-15 md:grid-cols-2">
         {projectsList.map((item, index) => (
