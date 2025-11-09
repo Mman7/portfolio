@@ -9,7 +9,9 @@ export default function About() {
           <div className="flex items-center gap-5">
             <PanelTop className="size-16" />
             <div>
-              <h1 className="text-2xl font-medium">Web Development</h1>
+              <h1 className="text-start text-2xl font-medium">
+                Web Development
+              </h1>
               <h2 className="text-start">Build responsive websites</h2>
             </div>
           </div>
@@ -18,7 +20,9 @@ export default function About() {
           <div className="flex items-center gap-3">
             <Smartphone className="size-16" />
             <div>
-              <h1 className="text-2xl font-medium">Mobile Development</h1>
+              <h1 className="text-start text-2xl font-medium">
+                Mobile Development
+              </h1>
               <h2 className="text-start">Cross-platform mobile apps</h2>
             </div>
           </div>
