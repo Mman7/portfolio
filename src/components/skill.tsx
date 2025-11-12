@@ -1,9 +1,7 @@
 import {
   faCss,
   faDartLang,
-  faFigma,
   faFlutter,
-  faGit,
   faGitAlt,
   faHtml5,
   faJs,
