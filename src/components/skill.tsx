@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useInView } from "react-intersection-observer";
 
 const fontAwesomeIconSize = "2x";
-const svgIconSize = "size-10";
+const svgIconSize = "size-8";
 const textStyle = "text-lg md:text-2xl font-medium ";
 
 export default function Skill() {
@@ -24,89 +24,97 @@ export default function Skill() {
     <div className="my-14 scroll-mt-24 px-4">
       <h1 className="mb-10 text-center text-3xl font-medium">Skills</h1>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <SkillItem>
+        <SkillItem title="HTML">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faHtml5} />
           <h1 className={textStyle}>HTML</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="CSS">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faCss} />
           <h1 className={textStyle}>CSS</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="TailwindCSS">
           {tailwindCSSicon}
           <h1 className={`${textStyle} hidden sm:block`}>TailwindCSS</h1>
           <h1 className={`${textStyle} sm:hidden`}>TWCSS</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Javascript">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faJs} />
           <h1 className={`${textStyle} hidden sm:block`}>Javascript</h1>
           <h1 className={`${textStyle} sm:hidden`}>JS</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Typescript">
           {typescriptIcon}
           <h1 className={`${textStyle} hidden sm:block`}>Typescript</h1>
           <h1 className={`${textStyle} sm:hidden`}>TS</h1>
         </SkillItem>
 
-        <SkillItem>
+        <SkillItem title="React">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faReact} />
           <h1 className={textStyle}>React</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="React Router">
           {reactRouterIcon}
           <h1 className={`${textStyle} hidden sm:block`}>ReactRouter</h1>
           <h1 className={`${textStyle} sm:hidden`}>RR7</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="NodeJS">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faNodeJs} />
           <h1 className={textStyle}>NodeJS</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Dart">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faDartLang} />
           <h1 className={textStyle}>Dart</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Flutter">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faFlutter} />
           <h1 className={textStyle}>Flutter</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Sass">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSass} />
           <h1 className={textStyle}>Sass</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Git">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faGitAlt} />
           <h1 className={textStyle}>Git</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="GitHub">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareGithub} />
           <h1 className={textStyle}>Github</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Figma">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareFigma} />
           <h1 className={textStyle}>Figma</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="NPM">
           <FontAwesomeIcon size={fontAwesomeIconSize} icon={faNpm} />
           <h1 className={textStyle}>NPM</h1>
         </SkillItem>
-        <SkillItem>
+        <SkillItem title="Visual Studio Code">
           {visualStudioCodeIcon}
-          <h1 className={textStyle}>VSC</h1>
+          <h1 className={textStyle}>VCS</h1>
         </SkillItem>
       </div>
     </div>
   );
 }
 
-export function SkillItem({ children }: { children: React.ReactNode }) {
+export function SkillItem({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) {
   const { ref, inView } = useInView({
     /* Optional options */
     triggerOnce: true,
     threshold: 0,
     rootMargin: "-50px",
   });
+  // console.log(children[0]);
   return (
     <div
+      title={title}
       ref={ref}
       className={`${inView && "animate-slideInFromBottom opacity-100"} bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
     >
