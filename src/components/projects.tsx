@@ -5,6 +5,7 @@ import notelyPic from "../assets/showcase/notely.png";
 import tomatoCountPic from "../assets/showcase/tomato_count.png";
 import pokedexPic from "../assets/showcase/pokedex.png";
 import ericmanDev from "../assets/showcase/ericman.dev.png";
+import { useInView } from "react-intersection-observer";
 
 interface ItemCardProps {
   title: string;
@@ -17,7 +18,7 @@ interface ItemCardProps {
 
 export default function Projects() {
   return (
-    <div className="my-14 scroll-mt-24 p-6 px-16">
+    <div className="my-14 p-6 px-6">
       <h1 className="mb-10 text-center text-2xl font-medium">Projects</h1>
       <div className="grid grid-cols-1 justify-items-center gap-15 md:grid-cols-2">
         {projectsList.map((item, index) => (
@@ -56,8 +57,17 @@ export function ItemCard({
   siteLink,
   codeLink,
 }: ItemCardProps) {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    triggerOnce: true,
+    threshold: 0,
+    rootMargin: "-150px",
+  });
   return (
-    <div className="card w-full bg-gray-800 shadow-md">
+    <div
+      ref={ref}
+      className={`${inView && "animate-slideInFromBottom opacity-100"} card w-full bg-gray-800 opacity-0 shadow-md`}
+    >
       <figure className="relative">
         <div className="absolute inset-0 bg-linear-to-b from-50% to-[#1E2939] opacity-100"></div>
         <img src={imgSrc} alt="Shoes" draggable={false} />
