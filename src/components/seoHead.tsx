@@ -18,7 +18,7 @@ export default function SeoHead() {
         property="og:description"
         content="Frontend developer building clean, modern, and responsive web apps with React."
       />
-      <link rel="icon" type="image/png" href="/favicon.svg?v=2" />
+      <link rel="icon" type="image/png" href="/favicon.svg" />
       <meta property="og:image" content={ericmanDev} />
       <meta property="og:url" content="https://ericman.dev" />
       <meta property="og:type" content="website" />
