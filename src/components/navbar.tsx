@@ -111,7 +111,7 @@ function DropDownMenu() {
           </li>
         </Link>
         <Link
-          to="contacts"
+          to="contact"
           smooth={true}
           duration={scrollDuration}
           offset={-100}
