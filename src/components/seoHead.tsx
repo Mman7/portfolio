@@ -1,5 +1,5 @@
 import ericmanDev from "../assets/showcase/ericman.dev.png";
-import favicon from "../../public/favicon.svg";
+import favicon from "../assets/favicon.svg";
 
 export default function SeoHead() {
   return (
