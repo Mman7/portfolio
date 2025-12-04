@@ -35,8 +35,8 @@ export default function About() {
             About me
           </h1>
           <h2 className="text-font-dark">
-            Hey I’m Eric a self-taught web developer driven by curiosity and a
-            passion for building clean, functional, and user-friendly
+            Hey I'm Eric Man a self-taught web developer driven by curiosity and
+            a passion for building clean, functional, and user-friendly
             applications.
           </h2>
           <br />
