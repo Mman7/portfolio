@@ -1,5 +1,4 @@
 import ericmanDev from "../assets/showcase/ericman.dev.png";
-import favicon from "../../favicon.png";
 
 export default function SeoHead() {
   return (
