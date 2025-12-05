@@ -66,11 +66,23 @@ export function ItemCard({
   return (
     <div
       ref={ref}
-      className={`${inView && "animate-slideInFromBottom opacity-100"} card w-full bg-gray-800 opacity-0 shadow-md`}
+      className={`${inView && "animate-slideInFromBottom opacity-100"} card group relative w-full overflow-hidden rounded-lg bg-gray-800 opacity-0 shadow-md`}
     >
-      <figure className="relative">
-        <div className="absolute inset-0 bg-linear-to-b from-50% to-[#1E2939] opacity-100"></div>
-        <img src={imgSrc} alt="Shoes" draggable={false} />
+      <figure className="relative transition-all duration-300 ease-in-out hover:scale-105">
+        <a
+          aria-label={`${title} Site Link`}
+          target="_blank"
+          href={siteLink}
+          className="hover:text-sky-300"
+        >
+          <div className="group absolute inset-0 bg-linear-to-b from-50% to-[#1E2939] duration-300 hover:backdrop-brightness-50">
+            <Link
+              className="m-auto hidden h-full group-hover:block"
+              size={30}
+            />
+          </div>
+          <img src={imgSrc} alt="Shoes" draggable={false} />
+        </a>
       </figure>
       <div className="card-body">
         <div className="flex w-full">
