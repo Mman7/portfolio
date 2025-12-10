@@ -1,20 +1,13 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Code, Link } from "lucide-react";
-import notelyPic from "../assets/showcase/notely.png";
-import tomatoCountPic from "../assets/showcase/tomato_count.png";
-import pokedexPic from "../assets/showcase/pokedex.png";
-import ericmanDev from "../assets/showcase/ericman.dev.png";
+import Image, { StaticImageData } from "next/image";
+import notelyPic from "@/public/showcase/notely.png";
+import tomatoCountPic from "@/public/showcase/tomato_count.png";
+import pokedexPic from "@/public/showcase/pokedex.png";
+import ericmanDev from "@/public/showcase/ericman.dev.png";
 import { useInView } from "react-intersection-observer";
-
-interface ItemCardProps {
-  title: string;
-  description: string;
-  badges: string[];
-  imgSrc: string;
-  siteLink: string;
-  codeLink: string;
-}
+import { ItemCard } from "./item_card";
 
 export default function Projects() {
   return (
@@ -45,79 +38,6 @@ export default function Projects() {
         </a>
       </div>
       <div className="divider"></div>
-    </div>
-  );
-}
-
-export function ItemCard({
-  title,
-  description,
-  badges,
-  imgSrc,
-  siteLink,
-  codeLink,
-}: ItemCardProps) {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    triggerOnce: true,
-    threshold: 0,
-    rootMargin: "-150px",
-  });
-  return (
-    <div
-      ref={ref}
-      className={`${inView && "animate-slideInFromBottom opacity-100"} card group relative w-full overflow-hidden rounded-lg bg-gray-800 opacity-0 shadow-md`}
-    >
-      <figure className="relative transition-all duration-300 ease-in-out hover:scale-105">
-        <a
-          aria-label={`${title} Site Link`}
-          target="_blank"
-          href={siteLink}
-          className="hover:text-sky-300"
-        >
-          <div className="group absolute inset-0 bg-linear-to-b from-50% to-[#1E2939] duration-300 hover:backdrop-brightness-50">
-            <Link
-              className="m-auto hidden h-full group-hover:block"
-              size={30}
-            />
-          </div>
-          <img src={imgSrc} alt="Shoes" draggable={false} />
-        </a>
-      </figure>
-      <div className="card-body">
-        <div className="flex w-full">
-          <a
-            aria-label={`${title} Site Link`}
-            target="_blank"
-            href={siteLink}
-            className="hover:text-sky-300"
-          >
-            <h2 className="card-title">
-              {title}
-              <Link size={16} />
-            </h2>
-          </a>
-          <a
-            aria-label={`${title} Code Link`}
-            target="_blank"
-            className="ml-auto hover:text-sky-300"
-            href={codeLink}
-          >
-            <Code />
-          </a>
-        </div>
-        <p>{description}</p>
-        <div className="card-actions mt-4">
-          {badges.map((text) => (
-            <div
-              key={text}
-              className="badge badge-secondary font-medium text-white"
-            >
-              {text}
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

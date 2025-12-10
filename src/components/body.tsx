@@ -1,32 +1,28 @@
 import About from "./about";
 import Contact from "./contact";
 import Footer from "./footer";
-import HeroSection from "./hero";
+import HeroSection from "./hero/hero";
 import Projects from "./projects";
 import Skill from "./skill";
-import { Element } from "react-scroll";
 
 export default function Body() {
   return (
     <div className="bg-myPrimaryDark dvh w-full">
-      <Element
-        name="hero"
-        className="bg-pattern overflow: auto z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]"
-      >
+      <section id="hero">
         <HeroSection />
-      </Element>
-      <Element name="about">
+      </section>
+      <section id="about">
         <About />
-      </Element>
-      <Element name="projects">
+      </section>
+      <section id="projects">
         <Projects />
-      </Element>
-      <Element name="skills">
+      </section>
+      <section id="skills">
         <Skill />
-      </Element>
-      <Element name="contact">
+      </section>
+      <section id="contact">
         <Contact />
-      </Element>
+      </section>
       <Footer />
     </div>
   );

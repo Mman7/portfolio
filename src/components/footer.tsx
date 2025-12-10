@@ -1,4 +1,4 @@
-import { SideContact } from "./hero";
+import { SideContact } from "./hero/hero";
 
 export default function Footer() {
   return (

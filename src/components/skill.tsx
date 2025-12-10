@@ -1,3 +1,4 @@
+"use client";
 import {
   faCss,
   faDartLang,
@@ -143,7 +144,9 @@ export function SkillItem({
     <div
       title={title}
       ref={ref}
-      className={`${inView && "animate-slideInFromBottom opacity-100"} bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
+      className={`${
+        inView && "animate-slideInFromBottom opacity-100"
+      } bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
     >
       <div className="flex items-center justify-between gap-1 text-white">
         {children}

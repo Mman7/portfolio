@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, type ReactElement } from "react";
 
 export interface ToastState {
@@ -20,7 +22,9 @@ export default function ShowToastWrapper({
       {toast.show && (
         <div className="toast toast-start animate-slideIn">
           <div
-            className={`alert ${toast.failed ? "alert-error" : "alert-success"}`}
+            className={`alert ${
+              toast.failed ? "alert-error" : "alert-success"
+            }`}
           >
             <span>
               {toast.failed
