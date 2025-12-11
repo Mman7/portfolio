@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ericman.dev/sitemap.xml
