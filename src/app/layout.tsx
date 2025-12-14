@@ -3,7 +3,6 @@ import Navbar from "@/src/components/navbar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  viewport: "width=device-width, initial-scale=1.0",
   metadataBase: new URL("https://ericman.dev"),
    alternates: {
     canonical: "https://ericman.dev",
@@ -44,6 +43,11 @@ export const metadata: Metadata = {
     description: "Frontend developer specializing in modern React web design.",
     images: ['/showcase/ericman.dev.png'],
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
