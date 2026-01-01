@@ -68,6 +68,10 @@ const items: Item[] = [
     icon: reactRouterIcon(svgIconStyle),
   },
   {
+    title: "NextJS",
+    icon: nextjsicon(svgIconStyle),
+  },
+  {
     title: "NodeJS",
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faNodeJs} />,
   },
@@ -91,13 +95,10 @@ const items: Item[] = [
     title: "Github",
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareGithub} />,
   },
+ 
   {
     title: "Figma",
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareFigma} />,
-  },
-  {
-    title: "NextJS",
-    icon: nextjsicon(svgIconStyle),
   },
   {
     title: "VSC",
