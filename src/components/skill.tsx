@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type React from "react";
 import { useInView } from "react-intersection-observer";
 import {
+  nextjsicon,
   reactRouterIcon,
   tailwindCSSicon,
   typescriptIcon,
@@ -95,8 +96,8 @@ const items: Item[] = [
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareFigma} />,
   },
   {
-    title: "NPM",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faNpm} />,
+    title: "NextJS",
+    icon: nextjsicon(svgIconStyle),
   },
   {
     title: "VSC",
@@ -148,7 +149,7 @@ export function SkillItem({
         inView && "animate-slideInFromBottom opacity-100"
       } bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
     >
-      <div className="flex items-center justify-between gap-1 text-white">
+      <div className="flex items-center justify-between gap-1 text-white ">
         {children}
       </div>
     </div>
