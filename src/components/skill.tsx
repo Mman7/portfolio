@@ -63,13 +63,13 @@ const items: Item[] = [
     icon: typescriptIcon(svgIconStyle),
   },
   {
+    title: "NextJS",
+    icon: nextjsicon(svgIconStyle),
+  },
+  {
     title: "React Router",
     shortName: "RR7",
     icon: reactRouterIcon(svgIconStyle),
-  },
-  {
-    title: "NextJS",
-    icon: nextjsicon(svgIconStyle),
   },
   {
     title: "NodeJS",
@@ -95,7 +95,7 @@ const items: Item[] = [
     title: "Github",
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareGithub} />,
   },
- 
+
   {
     title: "Figma",
     icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareFigma} />,
@@ -150,7 +150,7 @@ export function SkillItem({
         inView && "animate-slideInFromBottom opacity-100"
       } bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
     >
-      <div className="flex items-center justify-between gap-1 text-white ">
+      <div className="flex items-center justify-between gap-1 text-white">
         {children}
       </div>
     </div>
