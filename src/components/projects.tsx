@@ -74,9 +74,9 @@ const projectsList: ItemCardProps[] = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website built using React and TailwindCSS to showcase my projects, skills, and experience in web development.",
-    badges: ["React", "TailwindCSS", "TypeScript"],
+    badges: ["React", "NextJS", "TailwindCSS", "TypeScript"],
     imgSrc: ericmanDev,
-    siteLink: "www.ericman.dev",
+    siteLink: "https://www.ericman.dev",
     codeLink: "https://github.com/Mman7/portfolio",
   },
 ];
