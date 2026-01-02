@@ -41,8 +41,7 @@ export default function About() {
           </h2>
           <br />
           <h2 className="text-font-dark">
-            I focus on writing maintainable code and creating practical
-            solutions through hands-on projects and continuous learning.
+           Experienced in building responsive websites and personal projects using React, Next.js, and TypeScript.  Motivated to grow as a developer and contribute to real-world products.
           </h2>
         </div>
       </Card>
