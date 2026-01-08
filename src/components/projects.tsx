@@ -7,7 +7,7 @@ import tomatoCountPic from "@/public/showcase/tomato_count.png";
 import pokedexPic from "@/public/showcase/pokedex.png";
 import ericmanDev from "@/public/showcase/ericman.dev.png";
 import { useInView } from "react-intersection-observer";
-import { ItemCard } from "./item_card";
+import { ItemCard } from "./itemcard/item_card";
 
 export default function Projects() {
   return (
