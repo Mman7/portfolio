@@ -35,17 +35,17 @@ export default function Contact() {
     e.preventDefault();
     if (isFormValid()) {
       setSendingStatus(true);
-      sendEmail(formData).then((a) => {
-        if (a.status == 200) {
-          console.log("SUCCESS");
-          setSendingStatus(false);
-          showToast({ isFailed: false });
-        } else {
-          console.log("Failed");
-          setSendingStatus(false);
-          showToast({ isFailed: true });
-        }
-      });
+      // sendEmail(formData).then((a) => {
+      //   if (a.status == 200) {
+      //     console.log("SUCCESS");
+      //     setSendingStatus(false);
+      //     showToast({ isFailed: false });
+      //   } else {
+      //     console.log("Failed");
+      //     setSendingStatus(false);
+      //     showToast({ isFailed: true });
+      //   }
+      // });
     }
   };
 
@@ -60,7 +60,14 @@ export default function Contact() {
         <h1 className="mb-6 text-center text-3xl font-medium">
           Let’s have a talk!
         </h1>
-        <form className="w-full" onSubmit={handleSubmit} ref={form}>
+        <form
+          action="/success"
+          className="w-full"
+          onSubmit={handleSubmit}
+          ref={form}
+          data-netlify="true"
+          method="POST"
+        >
           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
             <legend className="fieldset-legend text-lg">
               Send me an Email!
@@ -68,7 +75,7 @@ export default function Contact() {
             <label className="label text-base">What's your name?</label>
             <input
               type="text"
-              name="user_name"
+              name="name"
               className="input w-full"
               placeholder="Name"
               onChange={handleChange}
@@ -77,7 +84,7 @@ export default function Contact() {
             <label className="label text-base">What's your email?</label>
             <input
               type="email"
-              name="user_email"
+              name="email"
               className="input w-full"
               placeholder="Email"
               onChange={handleChange}
@@ -96,6 +103,7 @@ export default function Contact() {
               className="btn btn-neutral mt-4 border-0 hover:bg-sky-500"
               disabled={isFormSending}
               aria-label="Send Email Button"
+              type="submit"
             >
               {isFormSending ? (
                 <span className="loading loading-spinner loading-md"></span>
