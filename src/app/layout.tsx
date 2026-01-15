@@ -4,9 +4,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ericman.dev"),
-   alternates: {
+  alternates: {
     canonical: "https://ericman.dev",
   },
+
   title: "Eric Man | Web Developer Portfolio",
   description:
     "Hi, I'm Eric Man — a frontend developer specializing in React and modern web design. Check out my projects!",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     "frontend developer",
   ],
   openGraph: {
+    siteName: "Eric Man",
     title: "Eric Man | Web Developer Portfolio",
     description:
       "Frontend developer building clean, modern, and responsive web apps with React.",
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/showcase/ericman.dev.png',
+        url: "/showcase/ericman.dev.png",
         width: 1200,
         height: 630,
         alt: "Eric Man Portfolio Screenshot",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eric Man | Web Developer Portfolio",
     description: "Frontend developer specializing in modern React web design.",
-    images: ['/showcase/ericman.dev.png'],
+    images: ["/showcase/ericman.dev.png"],
   },
 };
 
