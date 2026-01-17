@@ -2,7 +2,14 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ShowToastWrapper, { useShowToast } from "./showToast";
+import {
+  faSquareLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Mail, MapPin, PanelTop, Phone } from "lucide-react";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 interface emailparams {
   message: string;
   user_name: string;
@@ -56,57 +63,104 @@ export default function Contact() {
 
   return (
     <ShowToastWrapper toast={toast}>
-      <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 md:max-w-6xl">
-        <h1 className="mb-6 text-center text-3xl font-medium">
+      <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 py-30 lg:px-38">
+        <h1 className="mb-10 text-center text-3xl font-medium">
           Let’s have a talk!
         </h1>
-        <form className="w-full" onSubmit={handleSubmit} ref={form}>
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
-            <legend className="fieldset-legend text-lg">
-              Send me an Email!
-            </legend>
-            <label className="label text-base">What's your name?</label>
-            <input
-              type="text"
-              name="user_name"
-              className="input w-full"
-              placeholder="Name"
-              onChange={handleChange}
-            />
 
-            <label className="label text-base">What's your email?</label>
-            <input
-              type="email"
-              name="user_email"
-              className="input w-full"
-              placeholder="Email"
-              onChange={handleChange}
-            />
+        <div className="flex w-full flex-row justify-between gap-10">
+          <section>
+            <h1 className="mb-4 text-xl font-medium">Get in Touch</h1>
+            <h2 className="mb-4 text-gray-400">
+              Have a project in mind or just want to say hello? Fill out the
+              form and I'll get back to you as soon as possible.
+            </h2>
+            <div className="flex flex-col justify-around gap-4 pb-6">
+              <Tile
+                icon={<Mail className="size-8" />}
+                title="Email"
+                description="youzai0427@gmail.com"
+              />
+              <Tile
+                icon={<Phone className="size-8" />}
+                title="Phone"
+                description="+60 1120568009"
+              />
+              <Tile
+                icon={<MapPin className="size-8" />}
+                title="Location"
+                description="Malaysia"
+              />
+            </div>
+          </section>
+          <form className="w-1/2" onSubmit={handleSubmit} ref={form}>
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
+              <legend className="fieldset-legend text-lg">
+                Send me an Email!
+              </legend>
+              <label className="label text-base">What's your name?</label>
+              <input
+                type="text"
+                name="user_name"
+                className="input w-full"
+                placeholder="Name"
+                onChange={handleChange}
+              />
 
-            <label className="label text-base">Your message</label>
-            <input
-              type="text"
-              name="message"
-              className="input h-16 w-full resize text-base"
-              placeholder="hello..."
-              onChange={handleChange}
-            />
+              <label className="label text-base">What's your email?</label>
+              <input
+                type="email"
+                name="user_email"
+                className="input w-full"
+                placeholder="Email"
+                onChange={handleChange}
+              />
 
-            <button
-              className="btn btn-neutral mt-4 border-0 hover:bg-sky-500"
-              disabled={isFormSending}
-              aria-label="Send Email Button"
-              type="submit"
-            >
-              {isFormSending ? (
-                <span className="loading loading-spinner loading-md"></span>
-              ) : (
-                "Send"
-              )}
-            </button>
-          </fieldset>
-        </form>
+              <label className="label text-base">Your message</label>
+              <input
+                type="text"
+                name="message"
+                className="input h-16 w-full resize text-base"
+                placeholder="hello..."
+                onChange={handleChange}
+              />
+
+              <button
+                className="btn btn-neutral mt-4 border-0 hover:bg-sky-500"
+                disabled={isFormSending}
+                aria-label="Send Email Button"
+                type="submit"
+              >
+                {isFormSending ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  "Send"
+                )}
+              </button>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </ShowToastWrapper>
+  );
+}
+
+interface TileProps {
+  icon: React.ReactElement;
+  title: string;
+  description: string;
+}
+
+export function Tile({ icon, title, description }: TileProps) {
+  return (
+    <>
+      <div className="flex items-center gap-5">
+        <div className="bg-info/40 rounded-4xl p-4">{icon}</div>
+        <section>
+          <h1 className="text-start text-xl font-medium">{title}</h1>
+          <h2 className="text-start">{description}</h2>
+        </section>
+      </div>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 
 export default function About() {
   return (
-    <main className="containerShadow grid w-full scroll-mt-24 gap-6 px-8 py-14 md:grid-cols-2 lg:px-24">
+    <main className="containerShadow grid w-full scroll-mt-24 gap-6 px-8 py-14 md:grid-cols-2 lg:px-38">
       <section className="flex flex-col gap-6">
         <Card className="bg-myPrimary grid justify-items-center text-white">
           <div className="flex items-center gap-5">

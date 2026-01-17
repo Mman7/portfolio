@@ -108,7 +108,7 @@ const items: Item[] = [
 
 export default function Skill() {
   return (
-    <div className="m-auto my-14 scroll-mt-24 px-4 lg:px-24">
+    <div className="m-auto my-14 scroll-mt-24 px-4 lg:px-38">
       <h1 className="mb-10 text-center text-3xl font-medium">Skills</h1>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {items.map((item) => (

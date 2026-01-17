@@ -1,6 +1,8 @@
 import { Code, Link } from "lucide-react";
 import Image from "next/image";
 import VisibilityWrapper from "./visibility_wrapper";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function ItemCard({
   title,
@@ -35,20 +37,24 @@ export function ItemCard({
               aria-label={`${title} Site Link`}
               target="_blank"
               href={siteLink}
-              className="hover:text-sky-300"
+              className="my-auto hover:text-sky-300"
             >
               <h2 className="card-title">
                 {title}
                 <Link size={16} />
               </h2>
             </a>
+
             <a
               aria-label={`${title} Code Link`}
               target="_blank"
               className="ml-auto hover:text-sky-300"
               href={codeLink}
             >
-              <Code />
+              <div className="badge badge-outline badge-primary py-4 transition-all duration-300 hover:bg-sky-400 hover:text-black">
+                <FontAwesomeIcon size="xl" icon={faGithub} />
+                <h1 className="font-medium">Code</h1>
+              </div>
             </a>
           </div>
           <p>{description}</p>
