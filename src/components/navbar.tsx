@@ -6,8 +6,8 @@ const scrollDuration = 500;
 
 export default function Navbar() {
   return (
-    <div className="p-2">
-      <div className="navbar fixed z-1000 rounded-xl bg-black/40 px-4 backdrop-blur-2xl">
+    <div className="fixed z-1000 w-full p-3">
+      <div className="navbar rounded-xl bg-black/40 p-3 px-4 backdrop-blur-2xl">
         <div className="flex-1">
           <Link to="hero" smooth={true} duration={scrollDuration}>
             <button
