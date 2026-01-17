@@ -56,7 +56,7 @@ export default function Contact() {
 
   return (
     <ShowToastWrapper toast={toast}>
-      <div className="my-14 flex scroll-mt-24 flex-col items-center px-6">
+      <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 md:max-w-6xl">
         <h1 className="mb-6 text-center text-3xl font-medium">
           Let’s have a talk!
         </h1>
