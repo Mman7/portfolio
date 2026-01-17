@@ -2,7 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Avatar from "@/public/avatar.png";
 import MobileAvatar from "@/public/mobile_avatar.png";
 import Image from "next/image";
-import { faGithub, faSquareLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faSquareLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import CallToAction from "./call_to_action";
 
@@ -22,7 +26,7 @@ export default function HeroSection() {
         loading="eager"
         draggable={false}
         // height={800}
-        className="z-10 hidden brightness-75 h-[calc(100%)] w-auto select-none md:block"
+        className="z-10 hidden h-[calc(100%)] w-auto brightness-75 select-none md:block"
       />
 
       <CallToAction />
@@ -49,7 +53,16 @@ export function SideContact() {
   return (
     <>
       <a
-        aria-label="LinkedIn Hello"
+        href="https://wa.me/601120568009"
+        aria-label="WhatsApp Profile"
+        className="hover:text-white"
+        title="https://wa.me/601120568009"
+        target="_blank"
+      >
+        <FontAwesomeIcon size="2xl" icon={faWhatsapp} />
+      </a>
+      <a
+        aria-label="LinkedIn Profile"
         href="https://www.linkedin.com/in/man-eric-2aa13b159/"
         target="_blank"
         className="hover:text-white"
@@ -58,7 +71,7 @@ export function SideContact() {
         <FontAwesomeIcon size="2xl" icon={faSquareLinkedin} />
       </a>
       <a
-        aria-label="Github Hello"
+        aria-label="Github Profile"
         href="https://github.com/Mman7"
         target="_blank"
         title="https://github.com/Mman7"
@@ -67,7 +80,7 @@ export function SideContact() {
         <FontAwesomeIcon size="2xl" icon={faGithub} />
       </a>
       <a
-        aria-label="Gmail Hello"
+        aria-label="Gmail Address"
         title="youzai0427@gmail.com"
         target="_blank"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
