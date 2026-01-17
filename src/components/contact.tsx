@@ -68,32 +68,32 @@ export default function Contact() {
           Let’s have a talk!
         </h1>
 
-        <div className="flex w-full flex-row justify-between gap-10">
+        <div className="flex w-full flex-col justify-between gap-10 md:flex-row">
           <section>
             <h1 className="mb-4 text-xl font-medium">Get in Touch</h1>
-            <h2 className="mb-4 text-gray-400">
+            <h2 className="mb-8 text-gray-400">
               Have a project in mind or just want to say hello? Fill out the
               form and I'll get back to you as soon as possible.
             </h2>
-            <div className="flex flex-col justify-around gap-4 pb-6">
+            <div className="flex flex-col justify-around gap-6 pb-6">
               <Tile
-                icon={<Mail className="size-8" />}
+                icon={<Mail className="size-6" />}
                 title="Email"
                 description="youzai0427@gmail.com"
               />
               <Tile
-                icon={<Phone className="size-8" />}
+                icon={<Phone className="size-6" />}
                 title="Phone"
                 description="+60 1120568009"
               />
               <Tile
-                icon={<MapPin className="size-8" />}
+                icon={<MapPin className="size-6" />}
                 title="Location"
                 description="Malaysia"
               />
             </div>
           </section>
-          <form className="w-1/2" onSubmit={handleSubmit} ref={form}>
+          <form className="w-full" onSubmit={handleSubmit} ref={form}>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
               <legend className="fieldset-legend text-lg">
                 Send me an Email!
