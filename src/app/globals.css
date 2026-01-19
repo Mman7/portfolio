@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, night dark --prefersdark, night;
+  themes:
+    light --default,
+    night dark --prefersdark,
+    night;
 }
 html {
   scroll-behavior: smooth;
@@ -15,18 +18,6 @@ html {
   --font-display: myFont, sans-serif;
   --animate-slideIn: fadeSlideIn 300ms ease-out forwards;
   --animate-slideInFromBottom: fadeSlideInFromBottom 300ms ease-out forwards;
-  @keyframes fadeSlideIn {
-    0% {
-      opacity: 0; /* Start completely transparent */
-      transform: translateX(
-        -50px
-      ); /* Start slightly below its final position */
-    }
-    100% {
-      opacity: 1; /* End fully opaque */
-      transform: translateX(0); /* End at its original vertical position */
-    }
-  }
   @keyframes fadeSlideInFromBottom {
     0% {
       opacity: 0; /* Start completely transparent */
@@ -35,18 +26,6 @@ html {
     100% {
       opacity: 1; /* End fully opaque */
       transform: translateY(0); /* End at its original vertical position */
-    }
-  }
-  @keyframes fadeSlideIn {
-    0% {
-      opacity: 0; /* Start completely transparent */
-      transform: translateX(
-        -30px
-      ); /* Start slightly below its final position */
-    }
-    100% {
-      opacity: 1; /* End fully opaque */
-      transform: translateX(0); /* End at its original vertical position */
     }
   }
 }
@@ -58,10 +37,7 @@ html {
 }
 .bg-pattern {
   background-color: #12181f;
-  background-image: repeating-radial-gradient(
-      circle at 0 0,
-      transparent 0,
-      #12181f 25px
-    ),
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #12181f 25px),
     repeating-linear-gradient(#161e2f55, #161e2f);
 }
