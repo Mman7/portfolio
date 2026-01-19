@@ -1,4 +1,3 @@
-"use client";
 import {
   faCss,
   faDartLang,
@@ -15,7 +14,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type React from "react";
-import { useInView } from "react-intersection-observer";
 import {
   nextjsicon,
   reactRouterIcon,
@@ -23,6 +21,7 @@ import {
   typescriptIcon,
   visualStudioCodeIcon,
 } from "./icons";
+import VisibilityWrapper from "./itemcard/visibility_wrapper";
 
 const fontAwesomeIconSize = "2x";
 const svgIconStyle = "size-8 text-white mr-1";
@@ -136,23 +135,11 @@ export function SkillItem({
   children: React.ReactNode;
   title: string;
 }) {
-  const { ref, inView } = useInView({
-    /* Optional options */
-    triggerOnce: true,
-    threshold: 0,
-    rootMargin: "-50px",
-  });
   return (
-    <div
-      title={title}
-      ref={ref}
-      className={`${
-        inView && "animate-slideInFromBottom opacity-100"
-      } bg-mySecondary grid justify-items-center rounded-md p-3 opacity-0 duration-300 hover:brightness-125`}
-    >
+    <VisibilityWrapper className="bg-mySecondary grid justify-items-center rounded-md p-3">
       <div className="flex items-center justify-between gap-1 text-white">
         {children}
       </div>
-    </div>
+    </VisibilityWrapper>
   );
 }
