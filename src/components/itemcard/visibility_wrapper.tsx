@@ -5,8 +5,10 @@ import { useInView } from "react-intersection-observer";
 
 export default function VisibilityWrapper({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: string;
 }) {
   const { ref, inView } = useInView({
     /* Optional options */
@@ -17,7 +19,7 @@ export default function VisibilityWrapper({
   return (
     <div
       ref={ref}
-      className={`${inView && "animate-slideInFromBottom opacity-100"} opacity-0`}
+      className={`${inView && "animate-slideInFromBottom opacity-100"} opacity-0 ${className}`}
     >
       {children}
     </div>
