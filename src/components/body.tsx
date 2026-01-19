@@ -21,11 +21,11 @@ export default function Body() {
         <div className="mt-20 mb-10 text-center">
           <a
             aria-label="Github Profile Link"
-            className="duraiton-200 text-lg text-gray-400 transition-all hover:text-white"
+            className="duraiton-200 flex items-center justify-center text-lg text-gray-400 transition-all hover:text-white"
             target="_blank"
             href="https://github.com/Mman7"
           >
-            <FontAwesomeIcon size="xl" className="mr-3" icon={faGithub} />
+            <FontAwesomeIcon className="mr-3 size-8" icon={faGithub} />
             Explore more of my work on GitHub → [ https://github.com/Mman7 ]
           </a>
         </div>
