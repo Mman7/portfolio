@@ -6,7 +6,6 @@ import {
   faHtml5,
   faJs,
   faNodeJs,
-  faNpm,
   faReact,
   faSass,
   faSquareFigma,
@@ -23,7 +22,6 @@ import {
 } from "./icons";
 import VisibilityWrapper from "./itemcard/visibility_wrapper";
 
-const fontAwesomeIconSize = "2x";
 const svgIconStyle = "size-8 text-white mr-1";
 const textStyle = "text-lg md:text-2xl font-medium ";
 
@@ -32,15 +30,14 @@ interface Item {
   shortName?: string;
   icon: React.ReactNode;
 }
-
 const items: Item[] = [
   {
     title: "HTML",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faHtml5} />,
+    icon: <FontAwesomeIcon icon={faHtml5} />,
   },
   {
     title: "CSS",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faCss} />,
+    icon: <FontAwesomeIcon icon={faCss} />,
   },
   {
     title: "TailwindCSS",
@@ -50,11 +47,11 @@ const items: Item[] = [
   {
     title: "Javascript",
     shortName: "JS",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faJs} />,
+    icon: <FontAwesomeIcon icon={faJs} />,
   },
   {
     title: "React",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faReact} />,
+    icon: <FontAwesomeIcon icon={faReact} />,
   },
   {
     title: "Typescript",
@@ -72,32 +69,31 @@ const items: Item[] = [
   },
   {
     title: "NodeJS",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faNodeJs} />,
+    icon: <FontAwesomeIcon icon={faNodeJs} />,
   },
   {
     title: "Dart",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faDartLang} />,
+    icon: <FontAwesomeIcon icon={faDartLang} />,
   },
   {
     title: "Flutter",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faFlutter} />,
+    icon: <FontAwesomeIcon icon={faFlutter} />,
   },
   {
     title: "Sass",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSass} />,
+    icon: <FontAwesomeIcon icon={faSass} />,
   },
   {
     title: "Git",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faGitAlt} />,
+    icon: <FontAwesomeIcon icon={faGitAlt} />,
   },
   {
     title: "Github",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareGithub} />,
+    icon: <FontAwesomeIcon icon={faSquareGithub} />,
   },
-
   {
     title: "Figma",
-    icon: <FontAwesomeIcon size={fontAwesomeIconSize} icon={faSquareFigma} />,
+    icon: <FontAwesomeIcon icon={faSquareFigma} />,
   },
   {
     title: "VSC",
@@ -109,10 +105,10 @@ export default function Skill() {
   return (
     <div className="m-auto my-14 scroll-mt-24 px-4 lg:px-38">
       <h1 className="mb-10 text-center text-3xl font-medium">Skills</h1>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {items.map((item) => (
-          <SkillItem title={item.title} key={item.title}>
-            {item.icon}
+          <SkillItem key={item.title}>
+            <div className="-mt-1 mr-3 size-7">{item.icon}</div>
             <h1
               className={`${textStyle} ${item.shortName && "hidden"} sm:block`}
             >
@@ -128,18 +124,11 @@ export default function Skill() {
   );
 }
 
-export function SkillItem({
-  children,
-  title,
-}: {
-  children: React.ReactNode;
-  title: string;
-}) {
+export function SkillItem({ children }: { children: React.ReactNode }) {
+  // return <>{children}</>;
   return (
     <VisibilityWrapper className="bg-mySecondary grid justify-items-center rounded-md p-3">
-      <div className="flex items-center justify-between gap-1 text-white">
-        {children}
-      </div>
+      <div className="flex items-center text-white">{children}</div>
     </VisibilityWrapper>
   );
 }
