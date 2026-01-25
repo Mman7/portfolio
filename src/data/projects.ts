@@ -1,7 +1,7 @@
-import notelyPic from "@/public/showcase/notely.png";
 import tomatoCountPic from "@/public/showcase/tomato_count.png";
 import pokedexPic from "@/public/showcase/pokedex.png";
 import ericmanDev from "@/public/showcase/ericman.dev.png";
+import quizapp from "@/public/showcase/quiz_app.png";
 
 export const projectsList: ItemCardProps[] = [
   {
@@ -14,13 +14,13 @@ export const projectsList: ItemCardProps[] = [
     codeLink: "https://github.com/Mman7/tomato_clock",
   },
   {
-    title: "Notely",
+    title: "Quiz This",
     description:
-      "Notely is Note App built for local synchronization of data, the project doesn't require a remote server or any middle server",
-    badges: ["Flutter", "Dart", "MaterialUI", "AES256", "UDP", "TCP"],
-    imgSrc: notelyPic,
-    siteLink: "https://github.com/Mman7/Notely/releases",
-    codeLink: "https://github.com/Mman7/Notely",
+      "A comprehensive quiz application designed for programmers to test their knowledge across various programming topics and difficulty levels.",
+    badges: ["React", "NextJS", "TailwindCSS", "TypeScript", "Zustand"],
+    imgSrc: quizapp,
+    siteLink: "https://quiz-this.netlify.app/",
+    codeLink: "https://github.com/Mman7/programmer-quiz",
   },
   {
     title: "PokeDex",
