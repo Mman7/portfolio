@@ -59,7 +59,7 @@ export function SideContact() {
         title="https://wa.me/601120568009"
         target="_blank"
       >
-        <FontAwesomeIcon size="2xl" icon={faWhatsapp} />
+        <FontAwesomeIcon className="size-8" icon={faWhatsapp} />
       </a>
       <a
         aria-label="LinkedIn Profile"
@@ -68,7 +68,7 @@ export function SideContact() {
         className="hover:text-white"
         title="https://www.linkedin.com/in/man-eric-2aa13b159/"
       >
-        <FontAwesomeIcon size="2xl" icon={faSquareLinkedin} />
+        <FontAwesomeIcon className="size-8" icon={faSquareLinkedin} />
       </a>
       <a
         aria-label="Github Profile"
@@ -77,7 +77,7 @@ export function SideContact() {
         title="https://github.com/Mman7"
         className="hover:text-white"
       >
-        <FontAwesomeIcon size="2xl" icon={faGithub} />
+        <FontAwesomeIcon className="size-8" icon={faGithub} />
       </a>
       <a
         aria-label="Gmail Address"
@@ -86,7 +86,7 @@ export function SideContact() {
         href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
         className="hover:text-white"
       >
-        <FontAwesomeIcon size="2xl" icon={faEnvelope} />
+        <FontAwesomeIcon className="size-8" icon={faEnvelope} />
       </a>
     </>
   );
