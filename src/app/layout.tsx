@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/src/components/navbar";
 import { Metadata } from "next";
+import PageLoader from "../components/loading";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ericman.dev"),
@@ -61,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="night">
       <body>
+        <PageLoader />
         <Navbar />
         {children}
       </body>

@@ -12,7 +12,7 @@ import CallToAction from "./call_to_action";
 
 export default function HeroSection() {
   return (
-    <div className="bg-pattern overflow: auto z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]">
+    <div className="bg-pattern overflow:auto z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]">
       <Image
         src={MobileAvatar}
         alt="avatar"
