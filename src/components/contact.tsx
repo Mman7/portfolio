@@ -2,14 +2,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ShowToastWrapper, { useShowToast } from "./showToast";
-import {
-  faSquareLinkedin,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Mail, MapPin, PanelTop, Phone } from "lucide-react";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { Mail, MapPin, Phone } from "lucide-react";
 interface emailparams {
   message: string;
   user_name: string;
@@ -63,7 +57,7 @@ export default function Contact() {
 
   return (
     <ShowToastWrapper toast={toast}>
-      <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 py-30 lg:px-38">
+      <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 py-15 lg:px-38">
         <h1 className="mb-10 text-center text-3xl font-medium">
           Let’s have a talk!
         </h1>
