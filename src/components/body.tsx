@@ -27,12 +27,14 @@ export default function Body() {
           >
             <span className="flex items-center justify-center">
               <FontAwesomeIcon
-                className="mr-4 size-8 font-black"
+                className="mr-4 max-h-12 min-h-10 max-w-12 min-w-10 font-black"
                 icon={faGithub}
               />
               <p className="text-xl">
                 More on GitHub:{"  "}
-                <span className="underline">https://github.com/Mman7</span>
+                <span className="m-0 p-0 underline">
+                  https://github.com/Mman7
+                </span>
               </p>
             </span>
           </a>
