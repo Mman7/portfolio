@@ -12,7 +12,9 @@ export default function About() {
               <h1 className="text-start text-2xl font-medium">
                 Web Development
               </h1>
-              <h2 className="text-start">Build responsive websites</h2>
+              <h2 className="text-start">
+                Modern, accessible, and responsive web apps
+              </h2>
             </div>
           </div>
         </Card>
@@ -23,7 +25,9 @@ export default function About() {
               <h1 className="text-start text-2xl font-medium">
                 Mobile Development
               </h1>
-              <h2 className="text-start">Cross-platform mobile apps</h2>
+              <h2 className="text-start">
+                Cross-platform apps with clean performance
+              </h2>
             </div>
           </div>
         </Card>
@@ -35,15 +39,16 @@ export default function About() {
             About me
           </h1>
           <h2 className="text-font-dark">
-            Hey I'm Eric Man a self-taught web developer driven by curiosity and
-            a passion for building clean, functional, and user-friendly
-            applications.
+            Hi, I'm Eric Man, a self-taught frontend developer who enjoys
+            building clean and practical digital products. I focus on interfaces
+            that feel smooth, readable, and reliable across devices.
           </h2>
           <br />
           <h2 className="text-font-dark">
-            Experienced in building responsive websites and personal projects
-            using React, Next.js, and TypeScript. Motivated to grow as a
-            developer and contribute to real-world products.
+            I mainly work with React, Next.js, TypeScript, and Tailwind CSS.
+            Through personal projects, I turn ideas into production-ready
+            experiences while continuously improving code quality, UX, and
+            performance.
           </h2>
         </div>
       </Card>
@@ -60,7 +65,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`${className} h-full justify-items-center rounded-lg p-8 text-center md:text-start`}
+      className={`${className} h-full justify-items-center rounded-lg p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl md:text-start`}
     >
       {children}
     </div>

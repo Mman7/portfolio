@@ -127,7 +127,7 @@ export default function Skill() {
 export function SkillItem({ children }: { children: React.ReactNode }) {
   // return <>{children}</>;
   return (
-    <VisibilityWrapper className="bg-mySecondary grid justify-items-center rounded-md p-3">
+    <VisibilityWrapper className="bg-mySecondary grid justify-items-center rounded-md p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-500/20">
       <div className="flex items-center text-white">{children}</div>
     </VisibilityWrapper>
   );

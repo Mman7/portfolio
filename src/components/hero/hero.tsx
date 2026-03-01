@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import CallToAction from "./call_to_action";
+import BackgroundText from "./background_text";
 
 export default function HeroSection() {
   return (
@@ -36,15 +37,7 @@ export default function HeroSection() {
       >
         <SideContact />
       </div>
-      {/* Background TEXT */}
-      <div className="absolute inset-0 z-0 hidden flex-col items-center justify-center overflow-hidden text-5xl font-bold text-gray-300 select-none md:flex">
-        <h1 className="font-display mr-35 text-center text-base/47 text-[calc(12rem+2vw)] font-black tracking-tighter text-gray-600 opacity-55">
-          FRONTEND
-        </h1>
-        <h1 className="font-display ml-35 text-center text-base/47 text-[calc(12rem+2vw)] font-black tracking-tighter text-gray-600 opacity-55">
-          DEVELOPER
-        </h1>
-      </div>
+      <BackgroundText />
     </div>
   );
 }

@@ -2,16 +2,33 @@
 
 import { JSX, useEffect, useState } from "react";
 
+const LOADER_HIDDEN_EVENT = "page-loader-hidden";
+const LOADER_FADE_DURATION_MS = 1000;
+
 export default function PageLoader(): JSX.Element {
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
+    const onLoad = () => setLoaded(true);
+
     if (document.readyState === "complete") {
-      setLoaded(true);
+      onLoad();
     } else {
-      window.addEventListener("load", () => setLoaded(true));
+      window.addEventListener("load", onLoad, { once: true });
     }
+
+    return () => window.removeEventListener("load", onLoad);
   }, []);
+
+  useEffect(() => {
+    if (!loaded) return;
+
+    const timeoutId = window.setTimeout(() => {
+      window.dispatchEvent(new Event(LOADER_HIDDEN_EVENT));
+    }, LOADER_FADE_DURATION_MS);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [loaded]);
 
   return (
     <div
@@ -19,7 +36,12 @@ export default function PageLoader(): JSX.Element {
         loaded ? "pointer-events-none opacity-0!" : "opacity-100"
       }`}
     >
-      <span className="loading loading-spinner loading-xl"></span>
+      <div className="m-auto flex flex-col items-center gap-5 text-center">
+        <h1 className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
+          Hey I'm Eric Man
+        </h1>
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
     </div>
   );
 }

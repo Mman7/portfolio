@@ -7,7 +7,7 @@ export const projectsList: ItemCardProps[] = [
   {
     title: "Tomato Clock",
     description:
-      "Tomato Clock is a minimal and elegant Pomodoro timer app. It helps users boost productivity by structuring work in focused intervals interspersed with breaks.",
+      "A focused Pomodoro timer app designed to help users stay productive with structured work and break sessions in a minimal, distraction-free interface.",
     badges: ["Flutter", "Dart", "MaterialUI"],
     imgSrc: tomatoCountPic,
     siteLink: "https://github.com/Mman7/tomato_clock/releases",
@@ -16,7 +16,7 @@ export const projectsList: ItemCardProps[] = [
   {
     title: "Quiz This",
     description:
-      "A comprehensive quiz application designed for programmers to test their knowledge across various programming topics and difficulty levels.",
+      "A quiz platform for developers to practice core programming topics with multiple difficulty levels, instant feedback, and smooth navigation.",
     badges: ["React", "NextJS", "TailwindCSS", "TypeScript", "Zustand"],
     imgSrc: quizapp,
     siteLink: "https://quiz-this.netlify.app/",
@@ -25,7 +25,7 @@ export const projectsList: ItemCardProps[] = [
   {
     title: "PokeDex",
     description:
-      "Pokémon Index is a web app that lets users browse, search, and explore detailed information about Pokémon in a clean and responsive interface.",
+      "A responsive Pokédex web app that enables fast search, browsing, and detail exploration with a clean UI and API-driven data flow.",
     badges: ["React", "TypeScript", "TailwindCSS", "ReactQuery", "ReactRouter"],
     imgSrc: pokedexPic,
     siteLink: "https://pokedex-db.netlify.app/",
@@ -34,7 +34,7 @@ export const projectsList: ItemCardProps[] = [
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website built using React and TailwindCSS to showcase my projects, skills, and experience in web development.",
+      "My personal portfolio site built to present projects, technical skills, and development style with an interactive, responsive user experience.",
     badges: ["React", "NextJS", "TailwindCSS", "TypeScript"],
     imgSrc: ericmanDev,
     siteLink: "https://www.ericman.dev",

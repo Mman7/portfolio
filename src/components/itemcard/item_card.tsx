@@ -14,7 +14,7 @@ export function ItemCard({
 }: ItemCardProps) {
   return (
     <VisibilityWrapper>
-      <div className="card group relative h-full w-full overflow-hidden rounded-lg bg-gray-800 shadow-md">
+      <div className="card group relative h-full w-full overflow-hidden rounded-lg bg-gray-800 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-sky-500/20">
         <figure className="relative transition-all duration-300 ease-in-out hover:scale-105">
           <a
             aria-label={`${title} Site Link`}
