@@ -52,7 +52,7 @@ export function ItemCard({
               href={codeLink}
             >
               <div className="badge badge-outline badge-primary py-4 transition-all duration-300 hover:bg-sky-400 hover:text-black">
-                <FontAwesomeIcon size="xl" icon={faGithub} />
+                <Code size={16} />
                 <h1 className="font-medium">Code</h1>
               </div>
             </a>

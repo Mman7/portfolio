@@ -1,6 +1,6 @@
 import tomatoCountPic from "@/public/showcase/tomato_count.png";
 import pokedexPic from "@/public/showcase/pokedex.png";
-import ericmanDev from "@/public/showcase/ericman.dev.png";
+import jklmShowcase from "@/public/showcase/jklm_showcase.jpg";
 import quizapp from "@/public/showcase/quiz_app.png";
 
 export const projectsList: ItemCardProps[] = [
@@ -32,12 +32,12 @@ export const projectsList: ItemCardProps[] = [
     codeLink: "https://github.com/Mman7/pokemon_index",
   },
   {
-    title: "Portfolio Website",
+    title: "JKLM Game",
     description:
-      "My personal portfolio site built to present projects, technical skills, and development style with an interactive, responsive user experience.",
-    badges: ["React", "NextJS", "TailwindCSS", "TypeScript"],
-    imgSrc: ericmanDev,
-    siteLink: "https://www.ericman.dev",
-    codeLink: "https://github.com/Mman7/portfolio",
+      "A real-time, multiplayer drawing and guessing game inspired by JKLM.fun. Built to replicate interactive gameplay mechanics, live updates, and player matchmaking with a fully responsive interface.",
+    badges: ["React", "TypeScript", "NextJS", "Ably", "Zustand", "TailwindCSS"],
+    imgSrc: jklmShowcase,
+    siteLink: "https://jklm-custom.netlify.app/",
+    codeLink: "https://github.com/Mman7/jklm",
   },
 ];
