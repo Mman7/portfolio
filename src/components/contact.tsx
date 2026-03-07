@@ -1,27 +1,28 @@
 "use client";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import ShowToastWrapper, { useShowToast } from "./showToast";
 
 import { Mail, MapPin, Phone } from "lucide-react";
-interface emailparams {
+interface EmailParams {
   message: string;
   user_name: string;
   user_email: string;
 }
 
-const sendEmail = (data: any) => {
-  emailjs.init("s-0HeiO8iILHKz7Iu");
-  return emailjs.send("service_qbm42t7", "template_70hasxo", data);
-};
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map(
+      (key) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(data[key] ?? "")}`,
+    )
+    .join("&");
 
 const checkValid = (value: string) => value !== "";
 
 export default function Contact() {
-  const form = useRef<HTMLFormElement>(null);
   const [isFormSending, setSendingStatus] = useState<boolean>(false);
   const { toast, showToast } = useShowToast();
-  const [formData, setFormData] = useState<emailparams>({
+  const [formData, setFormData] = useState<EmailParams>({
     user_name: "",
     user_email: "",
     message: "",
@@ -32,21 +33,33 @@ export default function Contact() {
     checkValid(formData.user_name) &&
     checkValid(formData.user_email);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid()) {
+    if (!isFormValid()) {
+      return;
+    }
+
+    try {
       setSendingStatus(true);
-      sendEmail(formData).then((a) => {
-        if (a.status == 200) {
-          console.log("SUCCESS");
-          setSendingStatus(false);
-          showToast({ isFailed: false });
-        } else {
-          console.log("Failed");
-          setSendingStatus(false);
-          showToast({ isFailed: true });
-        }
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          ...formData,
+        }),
       });
+
+      if (response.ok) {
+        setFormData({ user_name: "", user_email: "", message: "" });
+        showToast({ isFailed: false });
+      } else {
+        showToast({ isFailed: true });
+      }
+    } catch {
+      showToast({ isFailed: true });
+    } finally {
+      setSendingStatus(false);
     }
   };
 
@@ -87,7 +100,16 @@ export default function Contact() {
               />
             </div>
           </section>
-          <form className="w-full" onSubmit={handleSubmit} ref={form}>
+          <form
+            className="w-full"
+            onSubmit={handleSubmit}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box flex w-full flex-col gap-4 border px-4 pb-6">
               <legend className="fieldset-legend text-lg">
                 Send me an Email!
@@ -98,6 +120,7 @@ export default function Contact() {
                 name="user_name"
                 className="input w-full"
                 placeholder="Name"
+                value={formData.user_name}
                 onChange={handleChange}
               />
 
@@ -107,6 +130,7 @@ export default function Contact() {
                 name="user_email"
                 className="input w-full"
                 placeholder="Email"
+                value={formData.user_email}
                 onChange={handleChange}
               />
 
@@ -116,6 +140,7 @@ export default function Contact() {
                 name="message"
                 className="input h-16 w-full resize text-base"
                 placeholder="hello..."
+                value={formData.message}
                 onChange={handleChange}
               />
 
