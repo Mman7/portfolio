@@ -41,11 +41,12 @@ export default function Contact() {
 
     try {
       setSendingStatus(true);
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "contact",
+          "bot-field": "",
           ...formData,
         }),
       });
@@ -105,6 +106,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             name="contact"
             method="POST"
+            action="/__forms.html"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
