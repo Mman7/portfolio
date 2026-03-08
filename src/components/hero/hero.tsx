@@ -19,7 +19,7 @@ export default function HeroSection() {
         alt="avatar"
         loading="eager"
         draggable={false}
-        className="z-10 mt-30 mb-20 p-6 brightness-80 select-none md:hidden"
+        className="z-1 mt-30 mb-20 p-6 brightness-80 select-none md:hidden"
       />
       <Image
         src={Avatar}
@@ -27,13 +27,13 @@ export default function HeroSection() {
         loading="eager"
         draggable={false}
         // height={800}
-        className="z-10 hidden h-[calc(100%)] w-auto brightness-75 select-none md:block"
+        className="z-1 hidden h-[calc(100%)] w-auto brightness-75 select-none md:block"
       />
 
       <CallToAction />
 
       <div
-        className={`absolute top-1/8 right-0 z-200 hidden flex-col justify-between gap-10 rounded-xl bg-black/40 p-3 *:duration-300 md:top-1/3 md:flex`}
+        className={`absolute top-1/8 right-0 z-1 hidden flex-col justify-between gap-10 rounded-xl bg-black/40 p-3 *:duration-300 md:top-1/3 md:flex`}
       >
         <SideContact />
       </div>

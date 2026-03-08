@@ -15,9 +15,7 @@ export default function Body() {
         <HeroSection />
       </section>
       <section id="about">
-        <VisibilityWrapper>
-          <About />
-        </VisibilityWrapper>
+        <About />
       </section>
       <section id="projects">
         <VisibilityWrapper>
