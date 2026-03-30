@@ -7,13 +7,13 @@ import {
   faSquareLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import CallToAction from "./call_to_action";
 import BackgroundText from "./background_text";
 
 export default function HeroSection() {
   return (
-    <div className="bg-pattern overflow:auto z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]">
+    <div className="bg-pattern overflow:auto relative z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]">
       <Image
         src={MobileAvatar}
         alt="avatar"
@@ -33,7 +33,7 @@ export default function HeroSection() {
       <CallToAction />
 
       <div
-        className={`absolute top-1/8 right-0 z-1 hidden flex-col justify-between gap-10 rounded-xl bg-black/40 p-3 *:duration-300 md:top-1/3 md:flex`}
+        className={`absolute top-1/2 right-0 z-1 hidden -translate-y-1/2 flex-col justify-between gap-6 rounded-xl bg-black/40 p-3 *:duration-300 md:flex`}
       >
         <SideContact />
       </div>
@@ -80,6 +80,14 @@ export function SideContact() {
         className="hover:text-white"
       >
         <FontAwesomeIcon className="size-8" icon={faEnvelope} />
+      </a>
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        className="hover:text-white"
+        title="Download CV"
+      >
+        <FontAwesomeIcon className="size-8" icon={faFilePdf} />
       </a>
     </>
   );

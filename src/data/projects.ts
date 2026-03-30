@@ -35,7 +35,15 @@ export const projectsList: ItemCardProps[] = [
     title: "JKLM Game",
     description:
       "A real-time, multiplayer drawing and guessing game inspired by JKLM.fun. Built to replicate interactive gameplay mechanics, live updates, and player matchmaking with a fully responsive interface.",
-    badges: ["React", "TypeScript", "NextJS", "Ably", "Zustand", "TailwindCSS"],
+    badges: [
+      "React",
+      "TypeScript",
+      "NextJS",
+      "Redis",
+      "Ably",
+      "Zustand",
+      "TailwindCSS",
+    ],
     imgSrc: jklmShowcase,
     siteLink: "https://jklm-custom.netlify.app/",
     codeLink: "https://github.com/Mman7/jklm",

@@ -17,7 +17,7 @@ export default function CallToAction() {
       <ScrollLink to="projects" smooth={true} duration={500} offset={-100}>
         <button
           aria-label="View Projects"
-          className="btn btn-md sm:btn-lg mx-4 rounded border border-sky-500 bg-white/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-white/20"
+          className="btn btn-md lg:btn-lg mx-4 rounded border border-sky-500 bg-white/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-white/20"
         >
           View Projects
         </button>
@@ -25,7 +25,7 @@ export default function CallToAction() {
       <ScrollLink to="contact" smooth={true} duration={500} offset={-100}>
         <button
           aria-label="Contact Me"
-          className="btn btn-md sm:btn-lg mx-4 rounded border border-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-white/20"
+          className="btn btn-md lg:btn-lg mx-4 rounded border border-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-white/20"
         >
           Contact Me
         </button>

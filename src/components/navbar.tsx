@@ -122,6 +122,16 @@ function DropDownMenu() {
             <button>Contact</button>
           </li>
         </Link>
+        <li className="block lg:hidden">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            className="hover:text-white"
+            title="Download CV"
+          >
+            Download CV
+          </a>
+        </li>
       </ul>
     </div>
   );

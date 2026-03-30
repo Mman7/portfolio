@@ -5,6 +5,15 @@ import { useEffect, useState } from "react";
 const LOADER_HIDDEN_EVENT = "page-loader-hidden";
 const LOADER_FALLBACK_DELAY_MS = 600;
 
+const WORD_BASE_CLASSES = "block transform-gpu transition-all";
+const WORD_LEFT_OFFSET_CLASSES = "-ml-[clamp(1.5rem,9vmin,9rem)]";
+const WORD_RIGHT_OFFSET_CLASSES = "ml-[clamp(1.5rem,9vmin,9rem)]";
+const WORD_VISIBLE_CLASSES = "translate-x-0 opacity-100";
+const WORD_HIDDEN_LEFT_CLASSES =
+  "-translate-x-[clamp(1.25rem,5vmin,4.5rem)] opacity-0";
+const WORD_HIDDEN_RIGHT_CLASSES =
+  "translate-x-[clamp(1.25rem,5vmin,4.5rem)] opacity-0";
+
 export default function BackgroundText() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -50,18 +59,18 @@ export default function BackgroundText() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 hidden flex-col items-center justify-center overflow-hidden text-5xl font-bold text-gray-300 select-none md:flex md:-translate-y-6 lg:translate-y-0">
-      <h1 className="font-display text-center leading-[0.75] font-black tracking-tighter text-gray-600 opacity-55 md:text-[clamp(4rem,13vw,7.5rem)] lg:text-[clamp(7rem,11vw,10rem)] xl:text-[calc(10rem+3vw)]">
+    <div className="absolute inset-0 z-0 hidden flex-col items-center justify-center overflow-hidden text-5xl font-bold text-gray-300 select-none md:flex md:translate-y-[clamp(0.5rem,10.5vh,1.25rem)]">
+      <h1 className="font-display text-center leading-[0.75] font-black tracking-tighter text-gray-600 opacity-55 md:text-[clamp(4.75rem,14vmin,9rem)] lg:text-[clamp(8.5rem,14vmin,15rem)] xl:text-[clamp(11rem,12vmin,18.5rem)] 2xl:text-[clamp(13rem,12.5vmin,22rem)]">
         <span
-          className={`-ml-35 block transform-gpu transition-all duration-700 ${
-            isLoaded ? "translate-x-0 opacity-100" : "-translate-x-16 opacity-0"
+          className={`${WORD_LEFT_OFFSET_CLASSES} ${WORD_BASE_CLASSES} delay-150 duration-700 ${
+            isLoaded ? WORD_VISIBLE_CLASSES : WORD_HIDDEN_LEFT_CLASSES
           }`}
         >
           FRONTEND
         </span>
         <span
-          className={`ml-35 block transform-gpu transition-all delay-150 duration-700 ${
-            isLoaded ? "translate-x-0 opacity-100" : "translate-x-16 opacity-0"
+          className={`${WORD_RIGHT_OFFSET_CLASSES} ${WORD_BASE_CLASSES} delay-150 duration-700 ${
+            isLoaded ? WORD_VISIBLE_CLASSES : WORD_HIDDEN_RIGHT_CLASSES
           }`}
         >
           DEVELOPER
