@@ -37,9 +37,9 @@ export default function PageLoader(): JSX.Element {
       }`}
     >
       <div className="m-auto flex flex-col items-center gap-5 text-center">
-        <h1 className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
+        <p className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl">
           Hey I'm Eric Man
-        </h1>
+        </p>
         <span className="loading loading-dots loading-lg"></span>
       </div>
     </div>

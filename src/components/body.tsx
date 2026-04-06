@@ -10,7 +10,7 @@ import VisibilityWrapper from "./itemcard/visibility_wrapper";
 
 export default function Body() {
   return (
-    <div className="bg-myPrimaryDark dvh w-full">
+    <main className="bg-myPrimaryDark dvh w-full">
       <section id="hero">
         <HeroSection />
       </section>
@@ -27,6 +27,7 @@ export default function Body() {
               aria-label="Github Profile Link"
               className="duraiton-200 text-lg text-gray-400 transition-all hover:text-white"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/Mman7"
             >
               <span className="flex items-center justify-center">
@@ -57,6 +58,6 @@ export default function Body() {
         </VisibilityWrapper>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 }

@@ -16,14 +16,14 @@ export default function HeroSection() {
     <div className="bg-pattern overflow:auto relative z-100 flex h-1/2 scroll-mt-24 flex-col items-center justify-end md:h-[calc(100vh-10rem)]">
       <Image
         src={MobileAvatar}
-        alt="avatar"
+        alt="Portrait of Eric Man, frontend developer"
         loading="eager"
         draggable={false}
         className="z-1 mt-30 mb-20 p-6 brightness-80 select-none md:hidden"
       />
       <Image
         src={Avatar}
-        alt="avatar"
+        alt="Portrait of Eric Man, frontend developer"
         loading="eager"
         draggable={false}
         // height={800}
@@ -51,6 +51,7 @@ export function SideContact() {
         className="hover:text-white"
         title="https://wa.me/601120568009"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <FontAwesomeIcon className="size-8" icon={faWhatsapp} />
       </a>
@@ -58,6 +59,7 @@ export function SideContact() {
         aria-label="LinkedIn Profile"
         href="https://www.linkedin.com/in/man-eric-2aa13b159/"
         target="_blank"
+        rel="noopener noreferrer"
         className="hover:text-white"
         title="https://www.linkedin.com/in/man-eric-2aa13b159/"
       >
@@ -67,6 +69,7 @@ export function SideContact() {
         aria-label="Github Profile"
         href="https://github.com/Mman7"
         target="_blank"
+        rel="noopener noreferrer"
         title="https://github.com/Mman7"
         className="hover:text-white"
       >
@@ -76,6 +79,7 @@ export function SideContact() {
         aria-label="Gmail Address"
         title="youzai0427@gmail.com"
         target="_blank"
+        rel="noopener noreferrer"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=youzai0427@gmail.com"
         className="hover:text-white"
       >
@@ -84,6 +88,7 @@ export function SideContact() {
       <a
         href="/cv.pdf"
         target="_blank"
+        rel="noopener noreferrer"
         className="hover:text-white"
         title="Download CV"
       >

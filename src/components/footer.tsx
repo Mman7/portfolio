@@ -11,7 +11,7 @@ export default function Footer() {
             Built with React + Tailwinds + a lots of coffee ☕.
           </p>
         </aside>
-        <h1 className="hidden md:block">Thanks for visiting!</h1>
+        <p className="hidden md:block">Thanks for visiting!</p>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <SideContact />
         </nav>

@@ -104,18 +104,18 @@ const items: Item[] = [
 export default function Skill() {
   return (
     <div className="m-auto my-14 scroll-mt-24 px-4 lg:px-38">
-      <h1 className="mb-10 text-center text-3xl font-medium">Skills</h1>
+      <h2 className="mb-10 text-center text-3xl font-medium">Skills</h2>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {items.map((item) => (
           <SkillItem key={item.title}>
             <div className="-mt-1 mr-3 size-7">{item.icon}</div>
-            <h1
+            <p
               className={`${textStyle} ${item.shortName && "hidden"} sm:block`}
             >
               {item.title}
-            </h1>
+            </p>
             {item.shortName && (
-              <h1 className={`${textStyle} sm:hidden`}>{item.shortName}</h1>
+              <p className={`${textStyle} sm:hidden`}>{item.shortName}</p>
             )}
           </SkillItem>
         ))}

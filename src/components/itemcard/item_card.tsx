@@ -19,6 +19,7 @@ export function ItemCard({
           <a
             aria-label={`${title} Site Link`}
             target="_blank"
+            rel="noopener noreferrer"
             href={siteLink}
             className="hover:text-sky-300"
           >
@@ -36,24 +37,26 @@ export function ItemCard({
             <a
               aria-label={`${title} Site Link`}
               target="_blank"
+              rel="noopener noreferrer"
               href={siteLink}
               className="my-auto hover:text-sky-300"
             >
-              <h2 className="card-title">
+              <h3 className="card-title">
                 {title}
                 <Link size={16} />
-              </h2>
+              </h3>
             </a>
 
             <a
               aria-label={`${title} Code Link`}
               target="_blank"
+              rel="noopener noreferrer"
               className="ml-auto hover:text-sky-300"
               href={codeLink}
             >
               <div className="badge badge-outline badge-primary py-4 transition-all duration-300 hover:bg-sky-400 hover:text-black">
                 <Code size={16} />
-                <h1 className="font-medium">Code</h1>
+                <span className="font-medium">Code</span>
               </div>
             </a>
           </div>

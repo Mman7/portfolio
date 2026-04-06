@@ -1,7 +1,26 @@
-import "./globals.css";
+import type { Metadata } from "next";
 import Navbar from "@/src/components/navbar";
-import { Metadata } from "next";
 import PageLoader from "../components/loading";
+import "./globals.css";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Eric Man",
+  url: "https://ericman.dev",
+  jobTitle: "Frontend Developer",
+  sameAs: [
+    "https://github.com/Mman7",
+    "https://www.linkedin.com/in/man-eric-2aa13b159/",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Eric Man Portfolio",
+  url: "https://ericman.dev",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ericman.dev"),
@@ -47,6 +66,10 @@ export const metadata: Metadata = {
     description: "Frontend developer specializing in modern React web design.",
     images: ["/showcase/ericman.dev.png"],
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport = {
@@ -62,6 +85,14 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="night">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <PageLoader />
         <Navbar />
         {children}

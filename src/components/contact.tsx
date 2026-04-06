@@ -72,17 +72,17 @@ export default function Contact() {
   return (
     <ShowToastWrapper toast={toast}>
       <div className="m-auto my-14 flex scroll-mt-24 flex-col items-center px-6 py-15 lg:px-38">
-        <h1 className="mb-10 text-center text-3xl font-medium">
+        <h2 className="mb-10 text-center text-3xl font-medium">
           Let’s build something together
-        </h1>
+        </h2>
 
         <div className="flex w-full flex-col justify-between gap-10 md:flex-row">
           <section>
-            <h1 className="mb-4 text-xl font-medium">Get in Touch</h1>
-            <h2 className="mb-8 text-gray-400">
+            <h3 className="mb-4 text-xl font-medium">Get in Touch</h3>
+            <p className="mb-8 text-gray-400">
               Have a project idea, a collaboration opportunity, or a role in
               mind? Send me a message and I usually reply within 24 hours.
-            </h2>
+            </p>
             <div className="flex flex-col justify-around gap-6 pb-6">
               <Tile
                 icon={<Mail className="size-6" />}
@@ -180,8 +180,8 @@ export function Tile({ icon, title, description }: TileProps) {
           {icon}
         </div>
         <section>
-          <h1 className="text-start text-xl font-medium">{title}</h1>
-          <h2 className="text-start">{description}</h2>
+          <h4 className="text-start text-xl font-medium">{title}</h4>
+          <p className="text-start">{description}</p>
         </section>
       </div>
     </>
