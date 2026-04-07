@@ -60,7 +60,7 @@ export default function BackgroundText() {
 
   return (
     <div className="absolute inset-0 z-0 hidden flex-col items-center justify-center overflow-hidden text-5xl font-bold text-gray-300 select-none md:flex md:translate-y-[clamp(0.5rem,10.5vh,1.25rem)]">
-      <div className="font-display text-center leading-[0.75] font-black tracking-tighter text-gray-600 opacity-55 md:text-[clamp(4.75rem,14vmin,9rem)] lg:text-[clamp(8.5rem,14vmin,15rem)] xl:text-[clamp(11rem,12vmin,18.5rem)] 2xl:text-[clamp(13rem,12.5vmin,22rem)]">
+      <div className="font-display text-center leading-[0.75] font-black tracking-tighter text-transparent opacity-70 [-webkit-text-stroke:1.5px_rgba(107,114,128,0.9)] md:text-[clamp(4.75rem,14vmin,9rem)] lg:text-[clamp(8.5rem,14vmin,15rem)] xl:text-[clamp(11rem,12vmin,18.5rem)] 2xl:text-[clamp(13rem,12.5vmin,22rem)]">
         <span
           className={`${WORD_LEFT_OFFSET_CLASSES} ${WORD_BASE_CLASSES} delay-150 duration-700 ${
             isLoaded ? WORD_VISIBLE_CLASSES : WORD_HIDDEN_LEFT_CLASSES

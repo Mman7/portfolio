@@ -6,6 +6,9 @@ import TypewriterText from "./typewriter_text";
 export default function CallToAction() {
   return (
     <div className="absolute z-100 py-16 text-center">
+      <h1 className="mb-2 text-2xl font-bold tracking-tight text-white md:text-4xl">
+        Eric Man - Frontend Developer Portfolio
+      </h1>
       <TypewriterText
         words={[
           "I build fast, accessible web apps.",
