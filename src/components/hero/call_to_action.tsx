@@ -6,17 +6,17 @@ import TypewriterText from "./typewriter_text";
 export default function CallToAction() {
   return (
     <div className="absolute z-100 py-16 text-center">
-      <h1 className="mb-2 text-2xl font-bold tracking-tight text-white md:text-4xl">
-        Eric Man - Frontend Developer Portfolio
-      </h1>
       <TypewriterText
         words={[
           "I build fast, accessible web apps.",
           "React + Next.js + TypeScript focus.",
           "Clean UI, smooth UX, strong performance.",
         ]}
-        className="mb-4 text-base text-gray-200 md:text-xl"
+        className="text-base text-gray-200 md:text-xl"
       />
+      <h1 className="mb-4 text-xl font-bold tracking-tight text-white md:text-4xl">
+        Eric Man - Web Developer Portfolio
+      </h1>
       <Link
         to="projects"
         smooth={true}
